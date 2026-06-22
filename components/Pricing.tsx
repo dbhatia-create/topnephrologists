@@ -47,36 +47,43 @@ export default function Pricing() {
 
               {/* Pricing tiers */}
               <div className="space-y-3 mb-8">
-                <div className="flex flex-wrap items-center justify-between gap-2 p-4 rounded-xl bg-sky border border-sky-dark">
-                  <div>
-                    <p className="font-semibold text-navy text-sm">Basic listing</p>
-                    <p className="text-xs text-muted mt-0.5">Per city — includes all loan product specialties</p>
+                {[
+                  {
+                    label: "Basic listing",
+                    sub: "Per city — includes all loan product specialties",
+                    price: PRICING.basicPerCity,
+                    color: "text-navy",
+                    prefix: "",
+                  },
+                  {
+                    label: "Featured Listing — first city",
+                    sub: "Top position above all ranked listings — 1 per city",
+                    price: PRICING.featuredFirstCity,
+                    color: "text-teal",
+                    prefix: "+",
+                  },
+                  {
+                    label: "Featured Listing — each additional city",
+                    sub: "50% off for every city after the first",
+                    price: PRICING.featuredAdditionalCity,
+                    color: "text-teal",
+                    prefix: "+",
+                  },
+                ].map(({ label, sub, price, color, prefix }) => (
+                  <div key={label} className="flex flex-wrap items-center justify-between gap-2 p-4 rounded-xl bg-sky border border-sky-dark">
+                    <div>
+                      <p className="font-semibold text-navy text-sm">{label}</p>
+                      <p className="text-xs text-muted mt-0.5">{sub}</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-sm text-muted line-through">{prefix}{formatCurrency(price * 2)}</p>
+                      <p className={`font-display text-xl sm:text-2xl font-bold ${color} whitespace-nowrap`}>
+                        {prefix}{formatCurrency(price)}
+                        <span className="text-sm font-normal text-muted">/yr</span>
+                      </p>
+                    </div>
                   </div>
-                  <span className="font-display text-xl sm:text-2xl font-bold text-navy whitespace-nowrap">
-                    {formatCurrency(PRICING.basicPerCity)}
-                    <span className="text-sm font-normal text-muted">/yr</span>
-                  </span>
-                </div>
-                <div className="flex flex-wrap items-center justify-between gap-2 p-4 rounded-xl bg-sky border border-sky-dark">
-                  <div>
-                    <p className="font-semibold text-navy text-sm">Featured Listing — first city</p>
-                    <p className="text-xs text-muted mt-0.5">Top position above all ranked listings — 1 per city</p>
-                  </div>
-                  <span className="font-display text-xl sm:text-2xl font-bold text-teal whitespace-nowrap">
-                    +{formatCurrency(PRICING.featuredFirstCity)}
-                    <span className="text-sm font-normal text-muted">/yr</span>
-                  </span>
-                </div>
-                <div className="flex flex-wrap items-center justify-between gap-2 p-4 rounded-xl bg-sky border border-sky-dark">
-                  <div>
-                    <p className="font-semibold text-navy text-sm">Featured Listing — each additional city</p>
-                    <p className="text-xs text-muted mt-0.5">50% off for every city after the first</p>
-                  </div>
-                  <span className="font-display text-xl sm:text-2xl font-bold text-teal whitespace-nowrap">
-                    +{formatCurrency(PRICING.featuredAdditionalCity)}
-                    <span className="text-sm font-normal text-muted">/yr</span>
-                  </span>
-                </div>
+                ))}
               </div>
 
               {/* Included features */}

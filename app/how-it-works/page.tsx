@@ -99,7 +99,10 @@ export default function HowItWorksPage() {
                     <div>
                       <p className="font-display text-lg font-bold text-navy">Standard Listing — first city</p>
                     </div>
-                    <p className="font-display text-2xl font-bold text-navy flex-shrink-0">$289</p>
+                    <div className="text-right flex-shrink-0">
+                      <p className="text-sm text-muted line-through">$578</p>
+                      <p className="font-display text-2xl font-bold text-navy">$289</p>
+                    </div>
                   </div>
                   <ul className="space-y-1.5">
                     {[
@@ -122,7 +125,10 @@ export default function HowItWorksPage() {
                     <div>
                       <p className="font-display text-lg font-bold text-navy">Additional cities</p>
                     </div>
-                    <p className="font-display text-2xl font-bold text-navy flex-shrink-0">$289 each</p>
+                    <div className="text-right flex-shrink-0">
+                      <p className="text-sm text-muted line-through">$578 each</p>
+                      <p className="font-display text-2xl font-bold text-navy">$289 each</p>
+                    </div>
                   </div>
                   <ul className="space-y-1.5">
                     {[
@@ -143,7 +149,10 @@ export default function HowItWorksPage() {
                     <div>
                       <p className="font-display text-lg font-bold text-navy">Featured Listing (city page banner)</p>
                     </div>
-                    <p className="font-display text-2xl font-bold text-teal flex-shrink-0">+$689 / city</p>
+                    <div className="text-right flex-shrink-0">
+                      <p className="text-sm text-muted line-through">+$1,378 / city</p>
+                      <p className="font-display text-2xl font-bold text-teal">+$689 / city</p>
+                    </div>
                   </div>
                   <ul className="space-y-1.5">
                     {[
