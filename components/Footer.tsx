@@ -8,7 +8,7 @@ const companyLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-const forLendersLinks = [
+const forParalegalsLinks = [
   { href: "/apply", label: "Apply to be Listed" },
   { href: "/how-it-works", label: "Benefits of Listing" },
   { href: "/how-it-works#recognition", label: "Recognition Process" },
@@ -61,7 +61,7 @@ export default function Footer() {
               For Paralegals
             </h3>
             <ul className="space-y-2">
-              {forLendersLinks.map((link) => (
+              {forParalegalsLinks.map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="text-sm text-white/60 hover:text-teal transition-colors">
                     {link.label}
