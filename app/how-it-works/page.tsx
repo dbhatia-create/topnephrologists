@@ -80,8 +80,8 @@ export default function HowItWorksPage() {
               </Button>
               <span className="text-muted text-sm">
                 Questions? Call{" "}
-                <a href="tel:+1XXXXXXXXXX" className="text-teal font-semibold hover:underline">
-                  (XXX) XXX-XXXX
+                <a href="tel:+18664507014" className="text-teal font-semibold hover:underline">
+                  (866) 450-7014
                 </a>
               </span>
             </div>
@@ -156,11 +156,11 @@ export default function HowItWorksPage() {
                   Submit Your Profile
                 </Button>
                 <a
-                  href="tel:+1XXXXXXXXXX"
+                  href="tel:+18664507014"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:text-teal transition-colors"
                 >
                   <Phone className="h-4 w-4" />
-                  (XXX) XXX-XXXX
+                  (866) 450-7014
                 </a>
               </div>
             </div>

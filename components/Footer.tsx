@@ -31,11 +31,11 @@ export default function Footer() {
               </span>
             </Link>
             <a
-              href="tel:+1XXXXXXXXXX"
+              href="tel:+18664507014"
               className="inline-flex items-center gap-2.5 rounded-lg border border-teal/40 bg-teal/10 px-4 py-2.5 text-sm font-semibold text-teal hover:bg-teal/20 hover:border-teal/60 transition-colors"
             >
               <Phone className="h-4 w-4" />
-              (XXX) XXX-XXXX
+              (866) 450-7014
             </a>
           </div>
 

@@ -158,7 +158,7 @@ export default function ApplyForm() {
         <h2 className="font-display text-2xl font-bold text-navy">Application Received!</h2>
         <p className="text-muted text-sm max-w-md mx-auto leading-relaxed">
           We&apos;ll reach out if we need anything to finalize your listing. Questions? Call us at:{" "}
-          <a href="tel:+1XXXXXXXXXX" className="text-teal font-semibold hover:text-teal-dark">(XXX) XXX-XXXX</a>
+          <a href="tel:+18664507014" className="text-teal font-semibold hover:text-teal-dark">(866) 450-7014</a>
         </p>
       </div>
     );

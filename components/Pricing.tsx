@@ -114,11 +114,11 @@ export default function Pricing() {
           </p>
           <div className="flex justify-center mt-6">
             <a
-              href="tel:+1XXXXXXXXXX"
+              href="tel:+18664507014"
               className="inline-flex items-center gap-2.5 rounded-lg border border-navy/20 bg-sky px-5 py-3 text-sm font-semibold text-navy hover:bg-sky-dark hover:border-teal/50 transition-colors"
             >
               <Phone className="h-4 w-4 text-teal" />
-              Questions? Call&nbsp;<span className="text-teal">(XXX) XXX-XXXX</span>
+              Questions? Call&nbsp;<span className="text-teal">(866) 450-7014</span>
             </a>
           </div>
         </FadeIn>

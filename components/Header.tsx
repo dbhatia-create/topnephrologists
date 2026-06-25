@@ -50,11 +50,11 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:+1XXXXXXXXXX"
+              href="tel:+18664507014"
               className="inline-flex items-center gap-2 text-sm font-medium text-white/80 hover:text-teal transition-colors"
             >
               <Phone className="h-4 w-4" />
-              (XXX) XXX-XXXX
+              (866) 450-7014
             </a>
             <Button href="/apply" variant="primary" size="sm">
               Get Listed
@@ -90,11 +90,11 @@ export default function Header() {
               ))}
               <div className="pt-2 flex flex-col gap-3">
                 <a
-                  href="tel:+1XXXXXXXXXX"
+                  href="tel:+18664507014"
                   className="inline-flex items-center gap-2 text-base font-medium text-white/80 hover:text-teal transition-colors py-1"
                 >
                   <Phone className="h-5 w-5" />
-                  (XXX) XXX-XXXX
+                  (866) 450-7014
                 </a>
                 <Button href="/apply" variant="primary" size="md" className="w-full" onClick={() => setMobileOpen(false)}>
                   Get Listed

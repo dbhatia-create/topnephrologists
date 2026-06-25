@@ -21,11 +21,11 @@ export default function TopBanner() {
             </div>
           </div>
           <a
-            href="tel:+1XXXXXXXXXX"
+            href="tel:+18664507014"
             className="flex-shrink-0 hidden sm:inline-flex items-center gap-2 border border-teal/40 text-teal text-sm font-semibold px-4 py-2 rounded-lg hover:bg-teal/10 transition-colors whitespace-nowrap"
           >
             <Phone className="h-3.5 w-3.5" />
-            (XXX) XXX-XXXX
+            (866) 450-7014
           </a>
         </div>
       </Container>

@@ -80,11 +80,11 @@ export default function AwardsDinner() {
                 Learn More
               </Button>
               <a
-                href="tel:+1XXXXXXXXXX"
+                href="tel:+18664507014"
                 className="inline-flex items-center gap-2.5 rounded-lg border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white/80 hover:text-teal hover:border-teal/50 hover:bg-teal/10 transition-colors"
               >
                 <Phone className="h-4 w-4 text-teal" />
-                (XXX) XXX-XXXX
+                (866) 450-7014
               </a>
             </div>
           </FadeIn>
