@@ -28,13 +28,14 @@ export const metadata: Metadata = {
     "The premier directory of top nephrologists and kidney specialists nationwide. Get your practice listed and connect with patients actively searching for nephrology care.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://topnephrologists.com"),
   icons: {
-    icon: "/stethoscope.svg",
-    shortcut: "/stethoscope.svg",
-    apple: "/stethoscope.svg",
+    icon: "/kidney.png",
+    shortcut: "/kidney.png",
+    apple: "/kidney.png",
   },
   openGraph: {
     type: "website",
     siteName: "TopNephrologists.com",
+    images: [{ url: "/kidney.png", width: 512, height: 512, alt: "TopNephrologists.com" }],
   },
 };
 

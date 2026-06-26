@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Stethoscope } from "lucide-react";
 import Button from "./Button";
 import Container from "./Container";
 import FadeIn from "./FadeIn";
@@ -27,7 +26,7 @@ export default function Hero() {
           {/* Left: headline */}
           <FadeIn direction="left">
             <div className="inline-flex items-center gap-2 rounded-full border border-teal/40 bg-teal/10 px-4 py-1.5 mb-6">
-              <Stethoscope className="h-3.5 w-3.5 text-teal" />
+              <Image src="/kidney.png" alt="" width={14} height={14} className="h-3.5 w-3.5 object-contain invert mix-blend-screen" />
               <span className="text-xs font-semibold text-teal uppercase tracking-widest">
                 Applications Open — 2026/2027 Listings
               </span>

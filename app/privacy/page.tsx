@@ -30,7 +30,7 @@ export default function PrivacyPage() {
           <p>We implement reasonable technical and organizational safeguards to protect your information. However, no transmission over the internet is completely secure.</p>
 
           <h2>7. Contact</h2>
-          <p>Questions about this policy? Email us at <a href="mailto:info@topphysiatrists.com">info@topphysiatrists.com</a>.</p>
+          <p>Questions about this policy? Email us at <a href="mailto:info@topnephrologists.com">info@topnephrologists.com</a>.</p>
         </div>
       </Container>
     </div>

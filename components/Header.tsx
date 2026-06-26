@@ -23,7 +23,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <Image src="/stethoscope.svg" alt="TopNephrologists.com" width={32} height={32} className="h-8 w-8 object-contain" />
+            <Image src="/kidney.png" alt="TopNephrologists.com" width={32} height={32} className="h-8 w-8 object-contain invert mix-blend-screen" />
             <span className="flex flex-col items-center">
               <span className="font-display text-lg font-bold text-white leading-none">
                 TopNephrologists<span className="text-teal">.com</span>

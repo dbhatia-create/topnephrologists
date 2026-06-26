@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone } from "lucide-react";
 import Container from "./Container";
 
@@ -12,6 +13,7 @@ const forNephrologistsLinks = [
   { href: "/apply", label: "Apply to be Listed" },
   { href: "/how-it-works", label: "Benefits of Listing" },
   { href: "/how-it-works#recognition", label: "Recognition Process" },
+  { href: "/#awards", label: "Awards & Dinner" },
 ];
 
 export default function Footer() {
@@ -22,6 +24,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1 flex flex-col items-center">
             <Link href="/" className="inline-flex flex-col items-center mb-5">
+              <Image src="/kidney.png" alt="TopNephrologists.com" width={48} height={48} className="h-12 w-12 object-contain invert mix-blend-screen mb-2" />
               <span className="font-display text-2xl font-bold text-white leading-none tracking-tight text-center">
                 TopNephrologists<span className="text-teal">.com</span>
               </span>

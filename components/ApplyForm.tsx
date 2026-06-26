@@ -3,7 +3,8 @@
 import { Fragment, useCallback, useEffect, useState } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Plus, Trash2, Stethoscope, ChevronRight, ChevronLeft } from "lucide-react";
+import Image from "next/image";
+import { Plus, Trash2, ChevronRight, ChevronLeft } from "lucide-react";
 import { applySchema, type ApplyFormData } from "@/lib/schema";
 import { FormField, Input, Textarea, Select } from "./FormField";
 import CityCombobox from "./CityCombobox";
@@ -109,7 +110,7 @@ export default function ApplyForm() {
   async function goNext() {
     const stepFields: (keyof ApplyFormData)[][] = [
       ["businessName", "businessPhone", "assetPermission"],
-      ["contactFirstName", "contactLastName", "email", "contactPhone"],
+      ["contactFirstName", "contactLastName", "email", "contactPhone", "plaqueShippingAddress", "plaqueShippingCity", "plaqueShippingState", "plaqueShippingZip"],
       ["locations", "services"],
       ["cardNumber", "cardExpiry", "cardCvc", "cardName", "billingAddress", "billingCity", "billingState", "billingZip", "consentToTerms"],
     ];
@@ -153,7 +154,7 @@ export default function ApplyForm() {
     return (
       <div className="rounded-2xl border border-teal/30 bg-teal/5 p-10 text-center space-y-4">
         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-teal/20">
-          <Stethoscope className="h-8 w-8 text-teal" />
+          <Image src="/kidney.png" alt="" width={36} height={36} className="object-contain mix-blend-multiply" />
         </div>
         <h2 className="font-display text-2xl font-bold text-navy">Application Received!</h2>
         <p className="text-muted text-sm max-w-md mx-auto leading-relaxed">
@@ -165,6 +166,19 @@ export default function ApplyForm() {
   }
 
   return (
+    <>
+      <div className="text-center mb-10">
+        <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-navy/10 mb-4">
+          <Image src="/kidney.png" alt="" width={28} height={28} className="object-contain mix-blend-multiply" />
+        </div>
+        <h1 className="font-display text-3xl sm:text-4xl font-bold text-navy mb-3">
+          Apply to Be Listed
+        </h1>
+        <p className="text-muted text-lg leading-relaxed">
+          Complete the form below to secure your listing on TopNephrologists.com.
+          All applications are reviewed and listings go live in August 2026.
+        </p>
+      </div>
     <div className="rounded-2xl border border-sky-dark bg-white shadow-sm overflow-hidden">
       {/* Step progress */}
       <div className="border-b border-sky-dark px-6 py-4 bg-sky">
@@ -274,6 +288,29 @@ export default function ApplyForm() {
               <FormField label="Notes" hint="optional" error={errors.notes?.message}>
                 <Textarea {...register("notes")} error={errors.notes?.message} rows={3} placeholder="Anything else we should know about your listing?" />
               </FormField>
+              <div className="pt-4 border-t border-sky-dark">
+                <h3 className="text-sm font-semibold text-navy mb-1">Complimentary Plaque Delivery</h3>
+                <p className="text-xs text-muted mb-4">Where should we ship your complimentary custom recognition plaque?</p>
+                <div className="space-y-5">
+                  <FormField label="Street Address" required error={errors.plaqueShippingAddress?.message}>
+                    <Input {...register("plaqueShippingAddress")} error={errors.plaqueShippingAddress?.message} placeholder="123 Main St, Suite 400" autoComplete="street-address" />
+                  </FormField>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                    <FormField label="City" required error={errors.plaqueShippingCity?.message} className="sm:col-span-1">
+                      <Input {...register("plaqueShippingCity")} error={errors.plaqueShippingCity?.message} placeholder="Dallas" autoComplete="address-level2" />
+                    </FormField>
+                    <FormField label="State" required error={errors.plaqueShippingState?.message}>
+                      <Select {...register("plaqueShippingState")} error={errors.plaqueShippingState?.message} autoComplete="address-level1">
+                        <option value="">State</option>
+                        {US_STATES.map(([code]) => <option key={code} value={code}>{code}</option>)}
+                      </Select>
+                    </FormField>
+                    <FormField label="ZIP Code" required error={errors.plaqueShippingZip?.message}>
+                      <Input {...register("plaqueShippingZip")} error={errors.plaqueShippingZip?.message} placeholder="75201" maxLength={10} inputMode="numeric" autoComplete="postal-code" />
+                    </FormField>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
 
@@ -281,43 +318,42 @@ export default function ApplyForm() {
           {step === 3 && (
             <div className="space-y-8">
               <div>
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-sm font-semibold text-navy">Cities <span className="text-red-500">*</span></p>
+                  <button type="button" onClick={() => addLocation({ city: "", state: "" })} className="inline-flex items-center gap-1 text-xs font-medium text-teal hover:text-teal-dark transition-colors">
+                    <Plus className="h-3 w-3" /> Add City
+                  </button>
+                </div>
                 {locFields.map((field, i) => {
                   const stateVal = watch(`locations.${i}.state`) ?? "";
                   const lockedCities = (watchedLocations ?? []).filter((l, j) => j !== i && !!l.city && l.state === stateVal).map((l) => l.city);
                   return (
                     <Fragment key={field.id}>
                       <div className={`flex items-start gap-3${i > 0 ? " mt-3" : ""}`}>
-                        <div className="flex-1 grid grid-cols-1 min-[400px]:grid-cols-2 gap-3">
-                          <FormField label={i === 0 ? "State" : ""} required={i === 0} error={errors.locations?.[i]?.state?.message}>
-                            <Select {...register(`locations.${i}.state`)} onChange={(e) => { register(`locations.${i}.state`).onChange(e); setValue(`locations.${i}.city`, ""); }} error={errors.locations?.[i]?.state?.message}>
-                              <option value="">Select state</option>
-                              {US_STATES.map(([code, name]) => <option key={code} value={code}>{name}</option>)}
-                            </Select>
-                          </FormField>
-                          <FormField label={i === 0 ? "City" : ""} required={i === 0} error={errors.locations?.[i]?.city?.message}>
-                            <CityCombobox
-                              state={stateVal}
-                              value={watch(`locations.${i}.city`)}
-                              excludedCities={lockedCities}
-                              onChange={(city) => {
-                                setValue(`locations.${i}.city`, city, { shouldValidate: true });
-                                if (city && stateVal && watchedFeatured) checkCityAvailability(city, stateVal);
-                              }}
-                              error={errors.locations?.[i]?.city?.message}
-                            />
-                          </FormField>
-                        </div>
+                        <FormField label={i === 0 ? "State" : ""} required={i === 0} error={errors.locations?.[i]?.state?.message} className="flex-1">
+                          <Select {...register(`locations.${i}.state`)} onChange={(e) => { register(`locations.${i}.state`).onChange(e); setValue(`locations.${i}.city`, ""); }} error={errors.locations?.[i]?.state?.message}>
+                            <option value="">Select state</option>
+                            {US_STATES.map(([code, name]) => <option key={code} value={code}>{name}</option>)}
+                          </Select>
+                        </FormField>
+                        <FormField label={i === 0 ? "City" : ""} required={i === 0} error={errors.locations?.[i]?.city?.message} className="flex-1">
+                          <CityCombobox
+                            state={stateVal}
+                            value={watch(`locations.${i}.city`)}
+                            excludedCities={lockedCities}
+                            onChange={(city) => {
+                              setValue(`locations.${i}.city`, city, { shouldValidate: true });
+                              if (city && stateVal && watchedFeatured) checkCityAvailability(city, stateVal);
+                            }}
+                            error={errors.locations?.[i]?.city?.message}
+                          />
+                        </FormField>
                         {locFields.length > 1 && (
-                          <button type="button" onClick={() => removeLocation(i)} className={`text-muted hover:text-red-500 transition-colors flex-shrink-0 ${i === 0 ? "mt-7" : "mt-1"}`} aria-label="Remove city">
+                          <button type="button" onClick={() => removeLocation(i)} className={`text-muted hover:text-red-500 transition-colors flex-shrink-0 ${i === 0 ? "pt-6" : "pt-1"}`} aria-label="Remove city">
                             <Trash2 className="h-4 w-4" />
                           </button>
                         )}
                       </div>
-                      {i === 0 && (
-                        <button type="button" onClick={() => addLocation({ city: "", state: "" })} className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-teal hover:text-teal-dark transition-colors">
-                          <Plus className="h-3 w-3" /> Add City
-                        </button>
-                      )}
                     </Fragment>
                   );
                 })}
@@ -432,5 +468,6 @@ export default function ApplyForm() {
         </div>
       </form>
     </div>
+    </>
   );
 }

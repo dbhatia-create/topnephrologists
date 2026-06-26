@@ -6,7 +6,7 @@ import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with the TopPhysiatrists.com team. We're here to answer your questions about listings and Featured Listings.",
+  description: "Get in touch with the TopNephrologists.com team. We're here to answer your questions about listings and Featured Listings.",
 };
 
 export default function ContactPage() {
@@ -39,7 +39,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-navy text-sm">Phone</p>
-                      <a href="tel:+18664507014" className="text-teal text-sm font-medium hover:underline">(866) 450-7014</a>
+                      <a href="tel:+18669656339" className="text-teal text-sm font-medium hover:underline">(866) 965-6339</a>
                       <p className="text-xs text-muted mt-0.5">Mon – Fri, 9am – 6pm ET</p>
                     </div>
                   </div>
@@ -49,8 +49,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-navy text-sm">Email</p>
-                      <a href="mailto:info@topphysiatrists.com" className="text-teal text-sm font-medium hover:underline">
-                        info@topphysiatrists.com
+                      <a href="mailto:info@topnephrologists.com" className="text-teal text-sm font-medium hover:underline">
+                        info@topnephrologists.com
                       </a>
                     </div>
                   </div>

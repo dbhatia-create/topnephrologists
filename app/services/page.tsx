@@ -5,8 +5,8 @@ import Button from "@/components/Button";
 import { services } from "@/content/services";
 
 export const metadata: Metadata = {
-  title: "PM&R Specialties",
-  description: "Browse the physical medicine & rehabilitation specialties available on TopPhysiatrists.com — from pain management and musculoskeletal medicine to stroke rehab, SCI, TBI, sports medicine, and more.",
+  title: "Nephrology Specialties",
+  description: "Browse the nephrology specialties available on TopNephrologists.com — from chronic kidney disease and dialysis management to hypertension, transplant nephrology, glomerulonephritis, and more.",
 };
 
 export default function ServicesPage() {
@@ -14,9 +14,9 @@ export default function ServicesPage() {
     <div className="bg-white min-h-screen">
       <div className="bg-navy py-14">
         <Container>
-          <h1 className="font-display text-3xl sm:text-4xl font-bold text-white mb-3">PM&amp;R Specialties</h1>
+          <h1 className="font-display text-3xl sm:text-4xl font-bold text-white mb-3">Nephrology Specialties</h1>
           <p className="text-white/70 text-lg max-w-lg leading-relaxed">
-            TopPhysiatrists.com covers the full spectrum of physical medicine and rehabilitation specialties — so patients and referring physicians can find the right specialist that matches their exact needs.
+            TopNephrologists.com covers the full spectrum of nephrology specialties — so patients and referring physicians can find the right kidney specialist that matches their exact needs.
           </p>
         </Container>
       </div>
@@ -25,7 +25,7 @@ export default function ServicesPage() {
         <div className="py-16 lg:py-20">
           <FadeIn>
             <p className="text-muted text-lg leading-relaxed max-w-2xl mb-14">
-              When you apply, select all the PM&amp;R specialties your practice offers. These appear on your listing
+              When you apply, select all the nephrology specialties your practice offers. These appear on your listing
               and help patients and referring physicians instantly understand your expertise. Your specialty selections do not
               affect pricing — the basic listing fee covers all specialties.
             </p>
@@ -53,7 +53,7 @@ export default function ServicesPage() {
             <div className="rounded-2xl bg-navy p-8 text-center">
               <h2 className="font-display text-2xl font-bold text-white mb-3">Ready to Get Listed?</h2>
               <p className="text-white/70 mb-6 max-w-md mx-auto">
-                Select your PM&amp;R specialties when you apply. Every qualifying physiatrist and PM&amp;R specialist is accepted.
+                Select your nephrology specialties when you apply. Every qualifying nephrologist and kidney specialist is accepted.
               </p>
               <Button href="/apply" variant="primary" size="lg">Apply Now</Button>
             </div>
