@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import ValueProps from "@/components/ValueProps";
 import DirectoryPreview from "@/components/DirectoryPreview";
-import AwardsDinner from "@/components/AwardsDinner";
 import Pricing from "@/components/Pricing";
 import AnnouncementBanner from "@/components/AnnouncementBanner";
 import TopBanner from "@/components/TopBanner";
@@ -15,7 +14,6 @@ export default function Home() {
       <Hero />
       <ValueProps />
       <DirectoryPreview />
-      <AwardsDinner />
       <Pricing />
       <AnnouncementBanner />
       <Faq items={faqItems} />

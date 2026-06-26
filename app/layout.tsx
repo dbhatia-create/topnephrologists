@@ -21,12 +21,12 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "TopPhysiatrists.com — Get Your Practice Listed",
-    template: "%s | TopPhysiatrists.com",
+    default: "TopNephrologists.com — Get Your Practice Listed",
+    template: "%s | TopNephrologists.com",
   },
   description:
-    "The premier directory of top physiatrists and physical medicine & rehabilitation specialists nationwide. Get your practice listed and connect with patients actively searching for PM&R care.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://topphysiatrists.com"),
+    "The premier directory of top nephrologists and kidney specialists nationwide. Get your practice listed and connect with patients actively searching for nephrology care.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://topnephrologists.com"),
   icons: {
     icon: "/stethoscope.svg",
     shortcut: "/stethoscope.svg",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    siteName: "TopPhysiatrists.com",
+    siteName: "TopNephrologists.com",
   },
 };
 

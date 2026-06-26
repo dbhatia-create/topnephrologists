@@ -42,9 +42,9 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg text-white/70 max-w-xl mb-8 leading-relaxed">
-              TopPhysiatrists.com is the premier directory connecting
+              TopNephrologists.com is the premier directory connecting
               patients, referring physicians, and healthcare organizations with top-rated
-              physiatrists and physical medicine &amp; rehabilitation specialists across the country.
+              nephrologists and kidney specialists across the country.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -67,7 +67,7 @@ export default function Hero() {
                   <div className="relative h-[480px] w-full">
                     <Image
                       src={IMAGES.heroPortrait}
-                      alt="Top-rated physiatrist"
+                      alt="Top-rated nephrologist"
                       fill
                       className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                       priority
@@ -77,7 +77,7 @@ export default function Hero() {
 
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
                     <p className="text-sm text-white/70 leading-relaxed max-w-sm">
-                      Build credibility with a professional profile that highlights your PM&amp;R specialties, experience, and the conditions you treat.
+                      Build credibility with a professional profile that highlights your nephrology specialties, experience, and the kidney conditions you treat.
                     </p>
                   </div>
                 </div>

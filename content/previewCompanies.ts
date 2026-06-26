@@ -17,8 +17,8 @@ export interface PreviewCompany {
 export const previewCompanies: PreviewCompany[] = [
   {
     id: 1,
-    name: "Apex Physical Medicine",
-    services: ["Pain Management", "Musculoskeletal Medicine", "Interventional Pain Procedures"],
+    name: "Apex Nephrology Associates",
+    services: ["Chronic Kidney Disease (CKD)", "Dialysis Management", "Hypertension & Renal Hypertension"],
     rating: 5.0,
     reviewCount: 241,
     phone: "(214) 555-1200",
@@ -29,8 +29,8 @@ export const previewCompanies: PreviewCompany[] = [
   },
   {
     id: 2,
-    name: "Summit Rehabilitation Specialists",
-    services: ["Stroke Rehabilitation", "Spinal Cord Injury Rehabilitation", "Traumatic Brain Injury Rehabilitation"],
+    name: "Summit Kidney Specialists",
+    services: ["Glomerular Disease", "Kidney Transplantation", "Acute Kidney Injury (AKI)"],
     rating: 4.9,
     reviewCount: 318,
     phone: "(214) 444-8800",
@@ -41,8 +41,8 @@ export const previewCompanies: PreviewCompany[] = [
   },
   {
     id: 3,
-    name: "Pinnacle PM&R Associates",
-    services: ["Sports Medicine & Rehabilitation", "Electrodiagnostic Medicine", "Work-Related Injury Rehabilitation"],
+    name: "Pinnacle Renal Care",
+    services: ["Diabetic Nephropathy", "Electrolyte Disorders", "Nephrolithiasis (Kidney Stones)"],
     rating: 4.8,
     reviewCount: 196,
     phone: "(214) 310-5500",
@@ -53,8 +53,8 @@ export const previewCompanies: PreviewCompany[] = [
   },
   {
     id: 4,
-    name: "Meridian Physiatry Group",
-    services: ["Geriatric Rehabilitation", "Cancer Rehabilitation", "Neuromuscular Disorders"],
+    name: "Meridian Nephrology Group",
+    services: ["Autoimmune & Systemic Disease Nephrology", "Polycystic Kidney Disease (PKD)", "Onco-Nephrology"],
     rating: 4.7,
     reviewCount: 158,
     phone: "(214) 555-9900",

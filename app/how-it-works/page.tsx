@@ -8,7 +8,7 @@ import { howItWorksFaqItems } from "@/content/faq";
 
 export const metadata: Metadata = {
   title: "How It Works",
-  description: "Learn how TopPhysiatrists.com works — apply, get listed, and connect with patients and referring physicians in your city.",
+  description: "Learn how TopNephrologists.com works — apply, get listed, and connect with patients and referring physicians in your city.",
 };
 
 const steps = [
@@ -16,13 +16,13 @@ const steps = [
     num: "01",
     title: "Tell Us About Your Practice",
     description:
-      "Tell us about your physiatry practice, the PM&R specialties you offer, and the cities you serve. The profile submission takes about 5 minutes and includes a transparent pricing estimate.",
+      "Tell us about your nephrology practice, the specialties you offer, and the cities you serve. The profile submission takes about 5 minutes and includes a transparent pricing estimate.",
   },
   {
     num: "02",
     title: "Get Reviewed",
     description:
-      "Our team verifies your credentials and confirms your application details. Every qualifying physiatrist and PM&R specialist is accepted. If we need anything to finalize your listing, we'll reach out directly.",
+      "Our team verifies your credentials and confirms your application details. Every qualifying nephrologist and kidney specialist is accepted. If we need anything to finalize your listing, we'll reach out directly.",
   },
   {
     num: "03",
@@ -34,7 +34,7 @@ const steps = [
     num: "04",
     title: "Be Recognized",
     description:
-      "Display the TopPhysiatrists.com 2027 verified badge on your website and receive your complimentary recognition plaque and invitation to the Annual Awards & Recognition Event in Summer 2027.",
+      "Display the TopNephrologists.com 2027 verified badge on your website and connect with patients and referring physicians actively searching for kidney specialists in your area.",
   },
 ];
 
@@ -80,8 +80,8 @@ export default function HowItWorksPage() {
               </Button>
               <span className="text-muted text-sm">
                 Questions? Call{" "}
-                <a href="tel:+18664507014" className="text-teal font-semibold hover:underline">
-                  (866) 450-7014
+                <a href="tel:+18669656339" className="text-teal font-semibold hover:underline">
+                  (866) 965-6339
                 </a>
               </span>
             </div>
@@ -107,9 +107,7 @@ export default function HowItWorksPage() {
                   <ul className="space-y-1.5">
                     {[
                       "Full physician profile with photo & description",
-                      "Custom recognition plaque",
-                      "Invitation to the Awards & Recognition Event",
-                      "TopPhysiatrists.com verified badge for your website",
+                      "TopNephrologists.com verified badge for your website",
                       "Full listing in every city you serve",
                       "Expands your reach to patients and referring physicians in your market",
                     ].map((f) => (
@@ -156,11 +154,11 @@ export default function HowItWorksPage() {
                   Submit Your Profile
                 </Button>
                 <a
-                  href="tel:+18664507014"
+                  href="tel:+18669656339"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:text-teal transition-colors"
                 >
                   <Phone className="h-4 w-4" />
-                  (866) 450-7014
+                  (866) 965-6339
                 </a>
               </div>
             </div>

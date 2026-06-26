@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useState } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Plus, Trash2, Stethoscope, ChevronRight, ChevronLeft } from "lucide-react";
@@ -109,7 +109,7 @@ export default function ApplyForm() {
   async function goNext() {
     const stepFields: (keyof ApplyFormData)[][] = [
       ["businessName", "businessPhone", "assetPermission"],
-      ["contactFirstName", "contactLastName", "email", "contactPhone", "plaqueShippingAddress", "plaqueShippingCity", "plaqueShippingState", "plaqueShippingZip"],
+      ["contactFirstName", "contactLastName", "email", "contactPhone"],
       ["locations", "services"],
       ["cardNumber", "cardExpiry", "cardCvc", "cardName", "billingAddress", "billingCity", "billingState", "billingZip", "consentToTerms"],
     ];
@@ -158,7 +158,7 @@ export default function ApplyForm() {
         <h2 className="font-display text-2xl font-bold text-navy">Application Received!</h2>
         <p className="text-muted text-sm max-w-md mx-auto leading-relaxed">
           We&apos;ll reach out if we need anything to finalize your listing. Questions? Call us at:{" "}
-          <a href="tel:+18664507014" className="text-teal font-semibold hover:text-teal-dark">(866) 450-7014</a>
+          <a href="tel:+18669656339" className="text-teal font-semibold hover:text-teal-dark">(866) 965-6339</a>
         </p>
       </div>
     );
@@ -198,11 +198,11 @@ export default function ApplyForm() {
             <div className="space-y-6">
               <div>
                 <h2 className="font-display text-xl font-bold text-navy mb-1">Business Details</h2>
-                <p className="text-sm text-muted">Tell us about your physiatry practice.</p>
+                <p className="text-sm text-muted">Tell us about your nephrology practice.</p>
               </div>
 
               <FormField label="Business Name" required error={errors.businessName?.message}>
-                <Input {...register("businessName")} error={errors.businessName?.message} placeholder="Apex Physical Medicine" />
+                <Input {...register("businessName")} error={errors.businessName?.message} placeholder="Apex Nephrology Associates" />
               </FormField>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -227,7 +227,7 @@ export default function ApplyForm() {
                       <div>
                         {val === "grant" ? (
                           <>
-                            <p className="font-semibold text-sm text-navy">I grant TopPhysiatrists.com permission</p>
+                            <p className="font-semibold text-sm text-navy">I grant TopNephrologists.com permission</p>
                             <p className="text-xs text-muted mt-0.5">to use photos, logos, and content from my website for my directory listing.</p>
                           </>
                         ) : (
@@ -261,7 +261,7 @@ export default function ApplyForm() {
                 </FormField>
               </div>
               <FormField label="Title / Role" hint="optional" error={errors.contactTitle?.message}>
-                <Input {...register("contactTitle")} error={errors.contactTitle?.message} placeholder="Owner, Medical Director, PM&R Physician…" />
+                <Input {...register("contactTitle")} error={errors.contactTitle?.message} placeholder="Owner, Medical Director, Nephrologist…" />
               </FormField>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <FormField label="Email Address" required error={errors.email?.message}>
@@ -274,47 +274,19 @@ export default function ApplyForm() {
               <FormField label="Notes" hint="optional" error={errors.notes?.message}>
                 <Textarea {...register("notes")} error={errors.notes?.message} rows={3} placeholder="Anything else we should know about your listing?" />
               </FormField>
-              <div className="pt-4 border-t border-sky-dark">
-                <h3 className="text-sm font-semibold text-navy mb-1">Complimentary Plaque Delivery</h3>
-                <p className="text-xs text-muted mb-4">Where should we ship your complimentary custom recognition plaque?</p>
-                <div className="space-y-5">
-                  <FormField label="Street Address" required error={errors.plaqueShippingAddress?.message}>
-                    <Input {...register("plaqueShippingAddress")} error={errors.plaqueShippingAddress?.message} placeholder="123 Main St, Suite 400" autoComplete="street-address" />
-                  </FormField>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                    <FormField label="City" required error={errors.plaqueShippingCity?.message} className="sm:col-span-1">
-                      <Input {...register("plaqueShippingCity")} error={errors.plaqueShippingCity?.message} placeholder="Dallas" autoComplete="address-level2" />
-                    </FormField>
-                    <FormField label="State" required error={errors.plaqueShippingState?.message}>
-                      <Select {...register("plaqueShippingState")} error={errors.plaqueShippingState?.message} autoComplete="address-level1">
-                        <option value="">State</option>
-                        {US_STATES.map(([code]) => <option key={code} value={code}>{code}</option>)}
-                      </Select>
-                    </FormField>
-                    <FormField label="ZIP Code" required error={errors.plaqueShippingZip?.message}>
-                      <Input {...register("plaqueShippingZip")} error={errors.plaqueShippingZip?.message} placeholder="75201" maxLength={10} inputMode="numeric" autoComplete="postal-code" />
-                    </FormField>
-                  </div>
-                </div>
-              </div>
             </div>
           )}
 
-          {/* Step 3 — Legal Specialties & Cities */}
+          {/* Step 3 — Cities & Specialties */}
           {step === 3 && (
             <div className="space-y-8">
               <div>
-                <h2 className="font-display text-xl font-bold text-navy mb-1">Cities & Specialties</h2>
-                <p className="text-sm text-muted">Select your service cities, PM&amp;R specialties, and listing type.</p>
-              </div>
-
-              <div>
-                <div className="space-y-3">
-                  {locFields.map((field, i) => {
-                    const stateVal = watch(`locations.${i}.state`) ?? "";
-                    const lockedCities = (watchedLocations ?? []).filter((l, j) => j !== i && !!l.city && l.state === stateVal).map((l) => l.city);
-                    return (
-                      <div key={field.id} className="flex items-start gap-3">
+                {locFields.map((field, i) => {
+                  const stateVal = watch(`locations.${i}.state`) ?? "";
+                  const lockedCities = (watchedLocations ?? []).filter((l, j) => j !== i && !!l.city && l.state === stateVal).map((l) => l.city);
+                  return (
+                    <Fragment key={field.id}>
+                      <div className={`flex items-start gap-3${i > 0 ? " mt-3" : ""}`}>
                         <div className="flex-1 grid grid-cols-1 min-[400px]:grid-cols-2 gap-3">
                           <FormField label={i === 0 ? "State" : ""} required={i === 0} error={errors.locations?.[i]?.state?.message}>
                             <Select {...register(`locations.${i}.state`)} onChange={(e) => { register(`locations.${i}.state`).onChange(e); setValue(`locations.${i}.city`, ""); }} error={errors.locations?.[i]?.state?.message}>
@@ -341,17 +313,19 @@ export default function ApplyForm() {
                           </button>
                         )}
                       </div>
-                    );
-                  })}
-                </div>
-                <button type="button" onClick={() => addLocation({ city: "", state: "" })} className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-teal hover:text-teal-dark transition-colors">
-                  <Plus className="h-3 w-3" /> Add City
-                </button>
+                      {i === 0 && (
+                        <button type="button" onClick={() => addLocation({ city: "", state: "" })} className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-teal hover:text-teal-dark transition-colors">
+                          <Plus className="h-3 w-3" /> Add City
+                        </button>
+                      )}
+                    </Fragment>
+                  );
+                })}
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-navy mb-1">PM&amp;R Specialties <span className="text-red-500">*</span></p>
-                <p className="text-xs text-muted mb-3">Select all PM&amp;R specialties your practice offers. These appear on your listing and do not affect pricing.</p>
+                <p className="text-sm font-semibold text-navy mb-1">Nephrology Specialties <span className="text-red-500">*</span></p>
+                <p className="text-xs text-muted mb-3">Select all nephrology specialties your practice offers. These appear on your listing and do not affect pricing.</p>
                 <ServicesSelect
                   value={watchedServices}
                   onChange={(selected) => setValue("services", selected, { shouldValidate: true })}

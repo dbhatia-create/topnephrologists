@@ -5,9 +5,9 @@ export interface FaqItem {
 
 export const faqItems: FaqItem[] = [
   {
-    question: "Who is TopPhysiatrists.com for?",
+    question: "Who is TopNephrologists.com for?",
     answer:
-      "TopPhysiatrists.com is for board-certified physiatrists and physical medicine & rehabilitation (PM&R) specialists who want to increase their practice visibility and connect with patients, referring physicians, and healthcare organizations actively searching for rehabilitation medicine specialists in their area.",
+      "TopNephrologists.com is for board-certified nephrologists and kidney specialists who want to increase their practice visibility and connect with patients, referring physicians, and healthcare organizations actively searching for nephrology care in their area.",
   },
   {
     question: "What does a listing cost?",
@@ -30,14 +30,14 @@ export const faqItems: FaqItem[] = [
       "Yes. You can add as many cities as you serve. Each city is billed separately at $289/year. If you add Featured placement, the upgrade is $689 for your first city and $345 for each additional city.",
   },
   {
-    question: "What PM&R specialties can I highlight?",
+    question: "What nephrology specialties can I highlight?",
     answer:
-      "You can showcase any specialties you practice — pain management, musculoskeletal medicine, stroke rehabilitation, spinal cord injury, sports medicine, electrodiagnostic medicine, TBI rehabilitation, and more. Your specialty selections are featured prominently on your listing.",
+      "You can showcase any specialties you practice — chronic kidney disease, hypertension, dialysis management, kidney transplantation, electrolyte disorders, glomerular disease, acute kidney injury, and more. Your specialty selections are featured prominently on your listing.",
   },
   {
     question: "Is my application guaranteed to be accepted?",
     answer:
-      "Yes — every qualifying physiatrist or PM&R practice that applies is accepted. We will reach out if we need any additional information to finalize your listing.",
+      "Yes — every qualifying nephrologist or nephrology practice that applies is accepted. We will reach out if we need any additional information to finalize your listing.",
   },
   {
     question: "What is the pre-launch special?",
@@ -52,12 +52,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Do I need to be in private practice?",
     answer:
-      "Not at all. TopPhysiatrists.com welcomes physiatrists in private practice, academic medical centers, hospital-based practices, and rehabilitation facilities alike. If you provide physiatry or PM&R services, you qualify for a listing.",
-  },
-  {
-    question: "What is the Annual Awards & Recognition Event?",
-    answer:
-      "Every listed physician is invited to the Annual TopPhysiatrists.com Awards & Recognition Event in Summer 2027 — an exclusive evening celebrating excellence in physical medicine and rehabilitation. Details will be sent to all listed professionals closer to the event.",
+      "Not at all. TopNephrologists.com welcomes nephrologists in private practice, academic medical centers, hospital-based practices, and dialysis centers alike. If you provide nephrology services, you qualify for a listing.",
   },
 ];
 
