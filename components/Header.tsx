@@ -10,7 +10,7 @@ import Button from "./Button";
 const navLinks = [
   { href: "/about", label: "About" },
   { href: "/how-it-works", label: "How It Works" },
-  { href: "/services", label: "Our Services" },
+  { href: "/#pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -23,13 +23,13 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <Image src="/kidney.png" alt="TopNephrologists.com" width={32} height={32} className="h-8 w-8 object-contain invert mix-blend-screen" />
+            <Image src="/logo.png" alt="TopGeriatricians.com" width={32} height={32} className="h-8 w-8 object-contain invert mix-blend-screen" />
             <span className="flex flex-col items-center">
               <span className="font-display text-lg font-bold text-white leading-none">
-                TopNephrologists<span className="text-teal">.com</span>
+                TopGeriatricians<span className="text-teal">.com</span>
               </span>
               <span className="text-[9px] text-white/50 tracking-widest uppercase mt-0.5">
-                Expertise &middot; Care &middot; Excellence
+                Trusted &middot; Verified &middot; Recognized
               </span>
             </span>
           </Link>
@@ -50,11 +50,11 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:+18669656339"
+              href="tel:+18664265255"
               className="inline-flex items-center gap-2 text-sm font-medium text-white/80 hover:text-teal transition-colors"
             >
               <Phone className="h-4 w-4" />
-              (866) 965-6339
+              (866) 426-5255
             </a>
             <Button href="/apply" variant="primary" size="sm">
               Get Listed
@@ -90,11 +90,11 @@ export default function Header() {
               ))}
               <div className="pt-2 flex flex-col gap-3">
                 <a
-                  href="tel:+18669656339"
+                  href="tel:+18664265255"
                   className="inline-flex items-center gap-2 text-base font-medium text-white/80 hover:text-teal transition-colors py-1"
                 >
                   <Phone className="h-5 w-5" />
-                  (866) 965-6339
+                  (866) 426-5255
                 </a>
                 <Button href="/apply" variant="primary" size="md" className="w-full" onClick={() => setMobileOpen(false)}>
                   Get Listed

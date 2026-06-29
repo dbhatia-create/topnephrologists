@@ -4,7 +4,7 @@ import Container from "@/components/Container";
 
 export const metadata: Metadata = {
   title: "Apply to Be Listed",
-  description: "Apply to be listed on TopNephrologists.com. Reach patients, referring physicians, and healthcare organizations actively searching for nephrology care.",
+  description: "Apply to be listed on TopGeriatricians.com. Reach older adults, families, and referring physicians actively searching for geriatric care.",
 };
 
 export default function ApplyPage() {

@@ -17,8 +17,8 @@ export interface PreviewCompany {
 export const previewCompanies: PreviewCompany[] = [
   {
     id: 1,
-    name: "Apex Nephrology Associates",
-    services: ["Chronic Kidney Disease (CKD)", "Dialysis Management", "Hypertension & Renal Hypertension"],
+    name: "Apex Geriatric Associates",
+    services: ["Dementia & Memory Care", "Chronic Disease Management", "Medication Management & Polypharmacy"],
     rating: 5.0,
     reviewCount: 241,
     phone: "(214) 555-1200",
@@ -29,8 +29,8 @@ export const previewCompanies: PreviewCompany[] = [
   },
   {
     id: 2,
-    name: "Summit Kidney Specialists",
-    services: ["Glomerular Disease", "Kidney Transplantation", "Acute Kidney Injury (AKI)"],
+    name: "Summit Senior Care Specialists",
+    services: ["Falls Prevention & Balance Disorders", "Palliative & End-of-Life Care", "Geriatric Psychiatry & Behavioral Health"],
     rating: 4.9,
     reviewCount: 318,
     phone: "(214) 444-8800",
@@ -41,8 +41,8 @@ export const previewCompanies: PreviewCompany[] = [
   },
   {
     id: 3,
-    name: "Pinnacle Renal Care",
-    services: ["Diabetic Nephropathy", "Electrolyte Disorders", "Nephrolithiasis (Kidney Stones)"],
+    name: "Pinnacle Elder Care Medicine",
+    services: ["Diabetes Management in Seniors", "Osteoporosis & Bone Health", "Preventive Care & Healthy Aging"],
     rating: 4.8,
     reviewCount: 196,
     phone: "(214) 310-5500",
@@ -53,8 +53,8 @@ export const previewCompanies: PreviewCompany[] = [
   },
   {
     id: 4,
-    name: "Meridian Nephrology Group",
-    services: ["Autoimmune & Systemic Disease Nephrology", "Polycystic Kidney Disease (PKD)", "Onco-Nephrology"],
+    name: "Meridian Geriatrics Group",
+    services: ["Cardiovascular Disease in Older Adults", "Geriatric Rehabilitation & Functional Recovery", "Home-Based Primary Care"],
     rating: 4.7,
     reviewCount: 158,
     phone: "(214) 555-9900",

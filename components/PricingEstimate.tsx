@@ -33,6 +33,7 @@ export default function PricingEstimate({
       : [];
 
   const hasTaken = featuredGrid.some((r) => r.taken);
+  const activeFeaturedCount = featuredGrid.filter((r) => !r.excluded && !r.taken).length;
 
   return (
     <div className="rounded-xl border border-teal/30 bg-navy/5 p-5 space-y-4">
@@ -54,7 +55,10 @@ export default function PricingEstimate({
       {featuredGrid.length > 0 && (
         <div className="border-t border-teal/20 pt-4 space-y-2">
           <p className="text-xs font-semibold text-navy">
-            Featured Listing — {formatCurrency(PRICING.featuredFirstCity)} first city / {formatCurrency(PRICING.featuredAdditionalCity)} additional
+            Featured Listing —{" "}
+            {activeFeaturedCount >= 2
+              ? `${formatCurrency(PRICING.featuredFirstCity)} first city / ${formatCurrency(PRICING.featuredAdditionalCity)} each additional (50% off)`
+              : `${formatCurrency(PRICING.featuredFirstCity)} / city`}
           </p>
           <p className="text-xs text-muted">Uncheck any cities you don&apos;t want featured.</p>
           <div className="space-y-1.5">
@@ -101,8 +105,8 @@ export default function PricingEstimate({
           {hasTaken && (
             <p className="text-xs text-red-600 mt-1">
               Featured is already claimed in some cities.{" "}
-              <a href="tel:+18669656339" className="font-medium underline hover:text-red-700">
-                Call us at (866) 965-6339
+              <a href="tel:+18664265255" className="font-medium underline hover:text-red-700">
+                Call us at (866) 426-5255
               </a>{" "}
               to discuss your options.
             </p>

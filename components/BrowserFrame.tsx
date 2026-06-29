@@ -4,7 +4,7 @@ interface BrowserFrameProps {
 }
 
 export default function BrowserFrame({
-  url = "topnephrologists.com",
+  url = "topgeriatricians.com",
   children,
 }: BrowserFrameProps) {
   return (

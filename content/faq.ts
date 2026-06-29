@@ -5,19 +5,19 @@ export interface FaqItem {
 
 export const faqItems: FaqItem[] = [
   {
-    question: "Who is TopNephrologists.com for?",
+    question: "Who is TopGeriatricians.com for?",
     answer:
-      "TopNephrologists.com is for board-certified nephrologists and kidney specialists who want to increase their practice visibility and connect with patients, referring physicians, and healthcare organizations actively searching for nephrology care in their area.",
+      "TopGeriatricians.com is for board-certified geriatricians and senior care specialists who want to increase their practice visibility and connect with older adults, family caregivers, and referring physicians actively searching for geriatric care in their area.",
   },
   {
     question: "What does a listing cost?",
     answer:
-      "$289 per city for a basic listing. Featured placement — which pins your practice at the top of your city page above all other listings — is an additional $689 for your first city and 50% off ($345) for each additional city. Pricing is for a 12-month annual listing.",
+      "$289 per city for a basic listing. Featured placement — which pins your practice at the top of your city page above all other listings — is an additional $689 per city. Pricing is for a 12-month annual listing.",
   },
   {
     question: "When will my listing go live?",
     answer:
-      "The directory launches in August 2026. All listings debut simultaneously, so every practice that applies now will be live from day one. Practices applying during the pre-launch period receive the balance of 2026 plus all of 2027.",
+      "Listings are typically published within a few business days after approval. During a new directory's pre-launch period, approved listings are held and published when the directory goes live so that all participating practices debut together.",
   },
   {
     question: "What is a Featured Listing?",
@@ -27,22 +27,27 @@ export const faqItems: FaqItem[] = [
   {
     question: "Can I be listed in multiple cities?",
     answer:
-      "Yes. You can add as many cities as you serve. Each city is billed separately at $289/year. If you add Featured placement, the upgrade is $689 for your first city and $345 for each additional city.",
+      "Yes. You can add as many cities as you serve. Each city is billed separately at $289/year. If you add Featured placement, the upgrade is $689 per city.",
   },
   {
-    question: "What nephrology specialties can I highlight?",
+    question: "What geriatric specialties can I highlight?",
     answer:
-      "You can showcase any specialties you practice — chronic kidney disease, hypertension, dialysis management, kidney transplantation, electrolyte disorders, glomerular disease, acute kidney injury, and more. Your specialty selections are featured prominently on your listing.",
+      "You can showcase any specialties you practice — dementia and memory care, chronic disease management, medication management, falls prevention, palliative care, osteoporosis, diabetes management in seniors, and more. Your specialty selections are featured prominently on your listing.",
   },
   {
     question: "Is my application guaranteed to be accepted?",
     answer:
-      "Yes — every qualifying nephrologist or nephrology practice that applies is accepted. We will reach out if we need any additional information to finalize your listing.",
+      "Yes — every qualifying geriatrician or geriatric practice that applies is accepted. We will reach out if we need any additional information to finalize your listing.",
   },
   {
-    question: "What is the pre-launch special?",
+    question: "Why should I apply now?",
     answer:
-      "Practices that apply before the August 2026 launch receive the balance of 2026 plus all of 2027 — so you're not paying a full year for just a few months. This is the best time to apply and secure your Featured placement before your market fills up.",
+      "The directory launches in August 2026 and Featured placements are first-come, first-served — only one per city. Applying now is the best way to secure your spot before your market fills up.",
+  },
+  {
+    question: "What is the Awards & Recognition Dinner?",
+    answer:
+      "The Awards & Recognition Dinner is an exclusive annual event celebrating the practices featured on TopGeriatricians.com. It brings together recognized practices, industry professionals, and invited guests to celebrate excellence in patient care. Each listing includes an invitation for your practice, with the event schedule and location announced in advance.",
   },
   {
     question: "Can I cancel my listing?",
@@ -52,7 +57,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Do I need to be in private practice?",
     answer:
-      "Not at all. TopNephrologists.com welcomes nephrologists in private practice, academic medical centers, hospital-based practices, and dialysis centers alike. If you provide nephrology services, you qualify for a listing.",
+      "Not at all. TopGeriatricians.com welcomes geriatricians in private practice, academic medical centers, hospital-based practices, and long-term care facilities alike. If you provide geriatric care services, you qualify for a listing.",
   },
 ];
 

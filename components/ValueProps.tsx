@@ -6,22 +6,22 @@ const props = [
   {
     icon: Building2,
     heading: "Increase Visibility.",
-    body: "Help patients discover your nephrology practice when searching for kidney specialists and renal care providers in your city.",
+    body: "Help older adults and their families discover your practice when searching for specialized geriatric care in your city.",
   },
   {
     icon: Globe,
-    heading: "Build Credibility.",
-    body: "A professional profile helps prospective patients understand your qualifications, experience, and treatment approach — before they ever pick up the phone.",
+    heading: "Build Trust & Credibility.",
+    body: "A professional profile helps patients and caregivers learn about your experience, approach to senior care, and areas of expertise — before the first appointment.",
   },
   {
     icon: TrendingUp,
-    heading: "Differentiate.",
-    body: "Showcase your expertise — chronic kidney disease, dialysis management, kidney transplantation, glomerular disease, and more — so patients find the right fit.",
+    heading: "Differentiate Your Practice.",
+    body: "Highlight your specialties, services, and commitment to improving quality of life for aging adults — so families find the right fit for their loved one.",
   },
   {
     icon: Users,
     heading: "Reach Every Stage.",
-    body: "Patients frequently research multiple nephrologists before selecting a physician. A listing ensures your practice is part of that decision-making process from the very first search.",
+    body: "Families often research several physicians before selecting a geriatrician. A listing helps ensure your practice is part of that decision-making process.",
   },
 ];
 
@@ -32,11 +32,11 @@ export default function ValueProps() {
         <FadeIn>
           <div className="text-center mb-14">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy mb-4">
-              For Nephrologists. Built for Growth.
+              For Geriatricians. Built for Growth.
             </h2>
             <div className="w-12 h-0.5 bg-teal mx-auto mb-5" />
             <p className="text-muted max-w-2xl mx-auto text-lg leading-relaxed">
-              TopNephrologists.com is the new destination for nephrology recognition and patient connection. Every practice that applies is listed and ready to be found.
+              TopGeriatricians.com is the new destination for geriatric medicine recognition and patient connection. Every practice that applies is listed and ready to be found.
             </p>
           </div>
         </FadeIn>

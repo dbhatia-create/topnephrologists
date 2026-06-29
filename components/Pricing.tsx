@@ -1,97 +1,76 @@
-import { Check, Phone } from "lucide-react";
+import { Check, Phone, Star } from "lucide-react";
 import Button from "./Button";
 import Container from "./Container";
 import FadeIn from "./FadeIn";
 import { PRICING, formatCurrency } from "@/lib/pricing";
 
-const LISTING_FEATURES = [
+const BASIC_FEATURES = [
   "Full professional profile with credentials & description",
-  "Listed by city and nephrology specialties",
-  "Contact details, website link & social media",
-  "TopNephrologists.com verified badge for your website",
-  "Pre-launch special: balance of 2026 + all of 2027",
-  "Reach patients and referring physicians actively searching in your area",
-  "Showcase nephrology specialties and kidney conditions treated",
-  "Highlight board certifications and fellowship training",
+  "Listed by city and geriatric specialties",
+  "City directory placement",
+  "Contact details, website & social media",
+  "TopGeriatricians.com verified badge",
+];
+
+const FEATURED_EXTRAS = [
+  "Featured badge + top placement",
+  "Highlighted above all basic listings",
+  "Only 1 available per city",
 ];
 
 export default function Pricing() {
+  const basicStandard = PRICING.basicPerCity * 2;
+  const featuredStandard = PRICING.featuredFirstCity * 2;
+
   return (
-    <section className="bg-white py-20 lg:py-24">
+    <section id="pricing" className="bg-white py-20 lg:py-24">
       <Container>
         <FadeIn>
-          <div className="text-center mb-14">
+          <div className="text-center mb-10">
             <p className="text-xs font-semibold text-teal uppercase tracking-widest mb-3">
               Transparent Pricing
             </p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy mb-4">
-              Simple, Transparent Pricing
+              One-Time Annual Fee
             </h2>
             <div className="w-12 h-0.5 bg-teal mx-auto mb-5" />
             <p className="text-muted max-w-xl mx-auto text-lg leading-relaxed">
-              One annual fee per city. Optional Featured Listing secures the top spot
-              in your city — only one available per city, first-come, first-served.
+              No subscriptions. No per-click fees. Pay once and your listing runs a full 12-month term.
             </p>
+          </div>
+
+          {/* Pre-launch banner */}
+          <div className="max-w-2xl mx-auto mb-10">
+            <div className="flex items-center gap-3 rounded-xl bg-teal/10 border border-teal/30 px-5 py-4">
+              <Star className="h-5 w-5 text-teal flex-shrink-0" />
+              <div>
+                <p className="font-semibold text-navy text-sm">Pre-Launch Special</p>
+                <p className="text-sm text-muted">Apply before our August 2026 launch and receive half off the standard price of all listings.</p>
+              </div>
+            </div>
           </div>
         </FadeIn>
 
-        <div className="max-w-2xl mx-auto">
+        {/* Two cards */}
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          {/* Basic */}
           <FadeIn delay={0.05}>
             <div className="rounded-2xl border border-sky-dark bg-white shadow-md p-8 flex flex-col h-full">
-              <p className="text-xs font-semibold text-teal uppercase tracking-widest mb-3">
-                City Listing
-              </p>
-              <h3 className="font-display text-2xl font-bold text-navy mb-6">
-                Your Listing
-              </h3>
+              <p className="text-xs font-semibold text-muted uppercase tracking-widest mb-2">Basic Listing</p>
+              <p className="text-sm text-muted mb-6">Standard directory placement</p>
 
-              {/* Pricing tiers */}
-              <div className="space-y-3 mb-8">
-                {[
-                  {
-                    label: "Basic listing",
-                    sub: "Per city — includes all nephrology specialties",
-                    price: PRICING.basicPerCity,
-                    color: "text-navy",
-                    prefix: "",
-                  },
-                  {
-                    label: "Featured Listing — first city",
-                    sub: "Top position above all ranked listings — 1 per city",
-                    price: PRICING.featuredFirstCity,
-                    color: "text-teal",
-                    prefix: "+",
-                  },
-                  {
-                    label: "Featured Listing — each additional city",
-                    sub: "50% off for every city after the first",
-                    price: PRICING.featuredAdditionalCity,
-                    color: "text-teal",
-                    prefix: "+",
-                  },
-                ].map(({ label, sub, price, color, prefix }) => (
-                  <div key={label} className="flex flex-wrap items-center justify-between gap-2 p-4 rounded-xl bg-sky border border-sky-dark">
-                    <div>
-                      <p className="font-semibold text-navy text-sm">{label}</p>
-                      <p className="text-xs text-muted mt-0.5">{sub}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-sm text-muted line-through">{prefix}{formatCurrency(price * 2)}</p>
-                      <p className={`font-display text-xl sm:text-2xl font-bold ${color} whitespace-nowrap`}>
-                        {prefix}{formatCurrency(price)}
-                        <span className="text-sm font-normal text-muted">/yr</span>
-                      </p>
-                    </div>
-                  </div>
-                ))}
+              <div className="mb-6">
+                <p className="text-sm text-muted line-through">{formatCurrency(basicStandard)}</p>
+                <div className="flex items-end gap-2">
+                  <p className="font-display text-4xl font-bold text-navy">{formatCurrency(PRICING.basicPerCity)}</p>
+                  <span className="text-sm text-muted mb-1.5">/ city / year</span>
+                </div>
+                <span className="inline-block mt-2 text-xs font-bold text-teal bg-teal/10 border border-teal/20 rounded-full px-3 py-1">50% Off</span>
               </div>
 
-              {/* Included features */}
-              <p className="text-xs font-semibold text-muted uppercase tracking-widest mb-3">
-                Every listing includes
-              </p>
               <ul className="space-y-2.5 flex-1 mb-8">
-                {LISTING_FEATURES.map((f) => (
+                {BASIC_FEATURES.map((f) => (
                   <li key={f} className="flex items-start gap-2.5">
                     <Check className="h-4 w-4 flex-shrink-0 mt-0.5 text-teal" />
                     <span className="text-sm text-muted leading-snug">{f}</span>
@@ -100,7 +79,45 @@ export default function Pricing() {
               </ul>
 
               <Button href="/apply" variant="secondary" size="md" className="w-full">
-                Submit Your Professional Profile
+                Get Basic Listing
+              </Button>
+            </div>
+          </FadeIn>
+
+          {/* Featured */}
+          <FadeIn delay={0.1}>
+            <div className="rounded-2xl border-2 border-teal bg-navy shadow-xl p-8 flex flex-col h-full relative">
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap inline-flex items-center gap-1.5 px-4 py-1.5 bg-teal text-white font-bold text-[11px] tracking-widest uppercase rounded-full shadow-md">
+                Most Visible — 1 Per City
+              </div>
+
+              <p className="text-xs font-semibold text-teal uppercase tracking-widest mb-2 mt-2">Featured Listing</p>
+              <p className="text-sm text-white/60 mb-6">Premium placement + spotlight badge</p>
+
+              <div className="mb-6">
+                <p className="text-sm text-white/40 line-through">+{formatCurrency(featuredStandard)}</p>
+                <div className="flex items-end gap-2">
+                  <p className="font-display text-4xl font-bold text-white">+{formatCurrency(PRICING.featuredFirstCity)}</p>
+                  <span className="text-sm text-white/50 mb-1.5">/ city</span>
+                </div>
+                <span className="inline-block mt-2 text-xs font-bold text-teal bg-teal/20 border border-teal/30 rounded-full px-3 py-1">50% Off</span>
+              </div>
+
+              <ul className="space-y-2.5 flex-1 mb-8">
+                <li className="flex items-start gap-2.5">
+                  <Check className="h-4 w-4 flex-shrink-0 mt-0.5 text-teal" />
+                  <span className="text-sm text-white/70 leading-snug">Everything in Basic</span>
+                </li>
+                {FEATURED_EXTRAS.map((f) => (
+                  <li key={f} className="flex items-start gap-2.5">
+                    <Check className="h-4 w-4 flex-shrink-0 mt-0.5 text-teal" />
+                    <span className="text-sm text-white/70 leading-snug">{f}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <Button href="/apply" variant="primary" size="md" className="w-full">
+                Get Featured Listing
               </Button>
             </div>
           </FadeIn>
@@ -108,15 +125,15 @@ export default function Pricing() {
 
         <FadeIn delay={0.2}>
           <p className="text-center text-xs text-muted mt-8 max-w-lg mx-auto">
-            Annual listing. All listings debut August 2026. Only one Featured Listing available per city.
+            12-month annual listing. All listings debut August 2026. Only one Featured Listing available per city.
           </p>
           <div className="flex justify-center mt-6">
             <a
-              href="tel:+18669656339"
+              href="tel:+18664265255"
               className="inline-flex items-center gap-2.5 rounded-lg border border-navy/20 bg-sky px-5 py-3 text-sm font-semibold text-navy hover:bg-sky-dark hover:border-teal/50 transition-colors"
             >
               <Phone className="h-4 w-4 text-teal" />
-              Questions? Call&nbsp;<span className="text-teal">(866) 965-6339</span>
+              Questions? Call&nbsp;<span className="text-teal">(866) 426-5255</span>
             </a>
           </div>
         </FadeIn>

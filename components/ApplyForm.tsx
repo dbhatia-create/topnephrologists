@@ -68,7 +68,7 @@ export default function ApplyForm() {
       services: [],
       featuredPlacement: true,
       excludedFeatured: [],
-      assetPermission: undefined,
+      assetPermission: "grant",
     },
     mode: "onTouched",
   });
@@ -115,7 +115,10 @@ export default function ApplyForm() {
       ["cardNumber", "cardExpiry", "cardCvc", "cardName", "billingAddress", "billingCity", "billingState", "billingZip", "consentToTerms"],
     ];
     const valid = await trigger(stepFields[step - 1]);
-    if (valid) setStep((s) => Math.min(s + 1, 4));
+    if (valid) {
+      setStep((s) => Math.min(s + 1, 4));
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }
 
   function goBack() { setStep((s) => Math.max(s - 1, 1)); }
@@ -154,12 +157,12 @@ export default function ApplyForm() {
     return (
       <div className="rounded-2xl border border-teal/30 bg-teal/5 p-10 text-center space-y-4">
         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-teal/20">
-          <Image src="/kidney.png" alt="" width={36} height={36} className="object-contain mix-blend-multiply" />
+          <Image src="/logo.png" alt="" width={36} height={36} className="object-contain mix-blend-multiply" />
         </div>
         <h2 className="font-display text-2xl font-bold text-navy">Application Received!</h2>
         <p className="text-muted text-sm max-w-md mx-auto leading-relaxed">
           We&apos;ll reach out if we need anything to finalize your listing. Questions? Call us at:{" "}
-          <a href="tel:+18669656339" className="text-teal font-semibold hover:text-teal-dark">(866) 965-6339</a>
+          <a href="tel:+18664265255" className="text-teal font-semibold hover:text-teal-dark">(866) 426-5255</a>
         </p>
       </div>
     );
@@ -169,13 +172,13 @@ export default function ApplyForm() {
     <>
       <div className="text-center mb-10">
         <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-navy/10 mb-4">
-          <Image src="/kidney.png" alt="" width={28} height={28} className="object-contain mix-blend-multiply" />
+          <Image src="/logo.png" alt="" width={28} height={28} className="object-contain mix-blend-multiply" />
         </div>
         <h1 className="font-display text-3xl sm:text-4xl font-bold text-navy mb-3">
           Apply to Be Listed
         </h1>
         <p className="text-muted text-lg leading-relaxed">
-          Complete the form below to secure your listing on TopNephrologists.com.
+          Complete the form below to secure your listing on TopGeriatricians.com.
           All applications are reviewed and listings go live in August 2026.
         </p>
       </div>
@@ -212,11 +215,11 @@ export default function ApplyForm() {
             <div className="space-y-6">
               <div>
                 <h2 className="font-display text-xl font-bold text-navy mb-1">Business Details</h2>
-                <p className="text-sm text-muted">Tell us about your nephrology practice.</p>
+                <p className="text-sm text-muted">Tell us about your geriatric practice.</p>
               </div>
 
               <FormField label="Business Name" required error={errors.businessName?.message}>
-                <Input {...register("businessName")} error={errors.businessName?.message} placeholder="Apex Nephrology Associates" />
+                <Input {...register("businessName")} error={errors.businessName?.message} placeholder="Apex Geriatric Associates" />
               </FormField>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -241,7 +244,7 @@ export default function ApplyForm() {
                       <div>
                         {val === "grant" ? (
                           <>
-                            <p className="font-semibold text-sm text-navy">I grant TopNephrologists.com permission</p>
+                            <p className="font-semibold text-sm text-navy">I grant TopGeriatricians.com permission</p>
                             <p className="text-xs text-muted mt-0.5">to use photos, logos, and content from my website for my directory listing.</p>
                           </>
                         ) : (
@@ -275,7 +278,7 @@ export default function ApplyForm() {
                 </FormField>
               </div>
               <FormField label="Title / Role" hint="optional" error={errors.contactTitle?.message}>
-                <Input {...register("contactTitle")} error={errors.contactTitle?.message} placeholder="Owner, Medical Director, Nephrologist…" />
+                <Input {...register("contactTitle")} error={errors.contactTitle?.message} placeholder="Owner, Medical Director, Geriatrician…" />
               </FormField>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <FormField label="Email Address" required error={errors.email?.message}>
@@ -293,20 +296,20 @@ export default function ApplyForm() {
                 <p className="text-xs text-muted mb-4">Where should we ship your complimentary custom recognition plaque?</p>
                 <div className="space-y-5">
                   <FormField label="Street Address" required error={errors.plaqueShippingAddress?.message}>
-                    <Input {...register("plaqueShippingAddress")} error={errors.plaqueShippingAddress?.message} placeholder="123 Main St, Suite 400" autoComplete="street-address" />
+                    <Input {...register("plaqueShippingAddress")} error={errors.plaqueShippingAddress?.message} placeholder="123 Main St, Suite 400" autoComplete="off" />
                   </FormField>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                     <FormField label="City" required error={errors.plaqueShippingCity?.message} className="sm:col-span-1">
-                      <Input {...register("plaqueShippingCity")} error={errors.plaqueShippingCity?.message} placeholder="Dallas" autoComplete="address-level2" />
+                      <Input {...register("plaqueShippingCity")} error={errors.plaqueShippingCity?.message} placeholder="Dallas" autoComplete="off" />
                     </FormField>
                     <FormField label="State" required error={errors.plaqueShippingState?.message}>
-                      <Select {...register("plaqueShippingState")} error={errors.plaqueShippingState?.message} autoComplete="address-level1">
+                      <Select {...register("plaqueShippingState")} error={errors.plaqueShippingState?.message} autoComplete="off">
                         <option value="">State</option>
                         {US_STATES.map(([code]) => <option key={code} value={code}>{code}</option>)}
                       </Select>
                     </FormField>
                     <FormField label="ZIP Code" required error={errors.plaqueShippingZip?.message}>
-                      <Input {...register("plaqueShippingZip")} error={errors.plaqueShippingZip?.message} placeholder="75201" maxLength={10} inputMode="numeric" autoComplete="postal-code" />
+                      <Input {...register("plaqueShippingZip")} error={errors.plaqueShippingZip?.message} placeholder="75201" maxLength={10} inputMode="numeric" autoComplete="off" />
                     </FormField>
                   </div>
                 </div>
@@ -320,8 +323,8 @@ export default function ApplyForm() {
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <p className="text-sm font-semibold text-navy">Cities <span className="text-red-500">*</span></p>
-                  <button type="button" onClick={() => addLocation({ city: "", state: "" })} className="inline-flex items-center gap-1 text-xs font-medium text-teal hover:text-teal-dark transition-colors">
-                    <Plus className="h-3 w-3" /> Add City
+                  <button type="button" onClick={() => addLocation({ city: "", state: "" })} className="inline-flex items-center gap-1.5 text-sm font-bold text-teal hover:text-teal-dark transition-colors border border-teal/40 rounded-lg px-3 py-1.5 hover:bg-teal/5">
+                    <Plus className="h-4 w-4" /> Add Another City
                   </button>
                 </div>
                 {locFields.map((field, i) => {
@@ -360,8 +363,8 @@ export default function ApplyForm() {
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-navy mb-1">Nephrology Specialties <span className="text-red-500">*</span></p>
-                <p className="text-xs text-muted mb-3">Select all nephrology specialties your practice offers. These appear on your listing and do not affect pricing.</p>
+                <p className="text-sm font-semibold text-navy mb-1">Geriatric Specialties <span className="text-red-500">*</span></p>
+                <p className="text-xs text-muted mb-3">Select all geriatric specialties your practice offers. These appear on your listing and do not affect pricing.</p>
                 <ServicesSelect
                   value={watchedServices}
                   onChange={(selected) => setValue("services", selected, { shouldValidate: true })}

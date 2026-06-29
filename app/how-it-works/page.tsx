@@ -8,7 +8,7 @@ import { howItWorksFaqItems } from "@/content/faq";
 
 export const metadata: Metadata = {
   title: "How It Works",
-  description: "Learn how TopNephrologists.com works — apply, get listed, and connect with patients and referring physicians in your city.",
+  description: "Learn how TopGeriatricians.com works — apply, get listed, and connect with patients and referring physicians in your city.",
 };
 
 const steps = [
@@ -16,13 +16,13 @@ const steps = [
     num: "01",
     title: "Tell Us About Your Practice",
     description:
-      "Tell us about your nephrology practice, the specialties you offer, and the cities you serve. The profile submission takes about 5 minutes and includes a transparent pricing estimate.",
+      "Tell us about your geriatric practice, the specialties you offer, and the cities you serve. The profile submission takes about 5 minutes and includes a transparent pricing estimate.",
   },
   {
     num: "02",
     title: "Get Reviewed",
     description:
-      "Our team verifies your credentials and confirms your application details. Every qualifying nephrologist and kidney specialist is accepted. If we need anything to finalize your listing, we'll reach out directly.",
+      "Our team verifies your credentials and confirms your application details. Every qualifying geriatrician and senior care specialist is accepted. If we need anything to finalize your listing, we'll reach out directly.",
   },
   {
     num: "03",
@@ -34,7 +34,7 @@ const steps = [
     num: "04",
     title: "Be Recognized",
     description:
-      "Display the TopNephrologists.com 2027 verified badge on your website and connect with patients and referring physicians actively searching for kidney specialists in your area.",
+      "Display the TopGeriatricians.com 2027 verified badge on your website and connect with older adults, families, and referring physicians actively searching for geriatric care in your area.",
   },
 ];
 
@@ -80,8 +80,8 @@ export default function HowItWorksPage() {
               </Button>
               <span className="text-muted text-sm">
                 Questions? Call{" "}
-                <a href="tel:+18669656339" className="text-teal font-semibold hover:underline">
-                  (866) 965-6339
+                <a href="tel:+18664265255" className="text-teal font-semibold hover:underline">
+                  (866) 426-5255
                 </a>
               </span>
             </div>
@@ -107,9 +107,9 @@ export default function HowItWorksPage() {
                   <ul className="space-y-1.5">
                     {[
                       "Full physician profile with photo & description",
-                      "TopNephrologists.com verified badge for your website",
+                      "TopGeriatricians.com verified badge for your website",
                       "Full listing in every city you serve",
-                      "Expands your reach to patients and referring physicians in your market",
+                      "Connects you with older adults, families, and referring physicians searching for geriatric care",
                     ].map((f) => (
                       <li key={f} className="flex items-start gap-2 text-sm text-muted">
                         <span className="text-teal font-bold mt-0.5">✓</span>
@@ -134,7 +134,7 @@ export default function HowItWorksPage() {
                     {[
                       "Banner placement at the top of your city page",
                       "Displayed above all ranked listings",
-                      "First-come — limited per city",
+                      "Only one Featured Listing per city — first-come, first-served",
                     ].map((f) => (
                       <li key={f} className="flex items-start gap-2 text-sm text-muted">
                         <span className="text-teal font-bold mt-0.5">✓</span>
@@ -146,7 +146,7 @@ export default function HowItWorksPage() {
               </div>
 
               <p className="text-xs text-muted text-center mb-6">
-                Annual listing. All listings debut August 2026. Featured Listing is subject to availability on a first-come basis per city.
+                12-month annual listing. All listings debut August 2026. Featured Listing is subject to availability on a first-come basis per city.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -154,11 +154,11 @@ export default function HowItWorksPage() {
                   Submit Your Profile
                 </Button>
                 <a
-                  href="tel:+18669656339"
+                  href="tel:+18664265255"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:text-teal transition-colors"
                 >
                   <Phone className="h-4 w-4" />
-                  (866) 965-6339
+                  (866) 426-5255
                 </a>
               </div>
             </div>

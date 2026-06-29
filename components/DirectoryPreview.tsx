@@ -29,10 +29,10 @@ function SiteNav() {
     <div className="bg-navy text-white px-3 py-2 sm:px-4 flex items-center gap-4">
       <AlignLeft className="h-4 w-4 text-white md:hidden" />
       <div className="flex items-center gap-1.5">
-        <Image src="/kidney.png" alt="" width={16} height={16} className="h-4 w-4 object-contain invert mix-blend-screen" />
+        <Image src="/logo.png" alt="" width={16} height={16} className="h-4 w-4 object-contain invert mix-blend-screen" />
         <span className="flex flex-col items-center">
-          <span className="text-white text-xs font-bold leading-none">TopNephrologists<span className="text-teal">.com</span></span>
-          <span className="text-[7px] text-white/40 tracking-widest uppercase leading-none mt-0.5">Expertise · Care · Excellence</span>
+          <span className="text-white text-xs font-bold leading-none">TopGeriatricians<span className="text-teal">.com</span></span>
+          <span className="text-[7px] text-white/40 tracking-widest uppercase leading-none mt-0.5">Trusted · Verified · Recognized</span>
         </span>
       </div>
       <div className="hidden sm:flex items-center gap-1 flex-1 max-w-xs bg-white/10 rounded text-[10px] px-2 py-1">
@@ -104,7 +104,7 @@ function DirectoryContent({ showFeatured }: { showFeatured: boolean }) {
     <div className="bg-gray-50 h-full">
       <SiteNav />
       <div className="bg-navy/95 px-4 py-3 text-center">
-        <p className="text-white text-xs sm:text-sm font-semibold">Top Nephrologists in Dallas, TX</p>
+        <p className="text-white text-xs sm:text-sm font-semibold">Top Geriatricians in Dallas, TX</p>
         <p className="text-white/50 text-[9px] sm:text-[10px] mt-0.5">Dallas, TX · {previewCompanies.length} physicians found</p>
       </div>
 
@@ -120,7 +120,7 @@ function DirectoryContent({ showFeatured }: { showFeatured: boolean }) {
       )}
 
       <div className="px-2 sm:px-3 pb-4 space-y-2">
-        <p className="text-[9px] sm:text-[10px] font-semibold text-gray-500 px-1">Top Nephrologists in Dallas, TX</p>
+        <p className="text-[9px] sm:text-[10px] font-semibold text-gray-500 px-1">Top Geriatricians in Dallas, TX</p>
         {ranked.map((company) => (
           <div key={company.id} className="flex items-center gap-3 p-2.5 rounded-lg border border-gray-100 bg-white hover:border-teal/30 transition-colors cursor-pointer">
             <span className="text-xs font-bold text-navy/40 w-4 text-center flex-shrink-0">{company.rank}</span>
@@ -180,7 +180,7 @@ function ProfileContent() {
       <div className="grid grid-cols-5 gap-0 p-2 sm:p-3">
         <div className="col-span-2 space-y-2 pr-2">
           <div className="bg-white rounded-lg border border-gray-100 p-2">
-            <p className="text-[8px] font-bold text-gray-400 uppercase tracking-wider mb-1.5">Nephrology Specialties</p>
+            <p className="text-[8px] font-bold text-gray-400 uppercase tracking-wider mb-1.5">Geriatric Specialties</p>
             {company.services.map((service) => (
               <div key={service} className="flex items-center gap-1 mb-1">
                 <CheckCircle2 className="h-2.5 w-2.5 text-teal flex-shrink-0" />
@@ -201,9 +201,9 @@ function ProfileContent() {
           </div>
           <div className="bg-navy rounded-lg p-2 text-center">
             <TrendingUp className="h-4 w-4 text-teal mx-auto mb-1" />
-            <p className="text-[8px] font-bold text-white leading-tight">TopNephrologists.com</p>
-            <p className="text-[6px] text-white/40 tracking-widest uppercase mt-0.5">Expertise &middot; Care &middot; Excellence</p>
-            <p className="text-[7px] text-teal/80 mt-0.5">2027 Recognized</p>
+            <p className="text-[8px] font-bold text-white leading-tight">TopGeriatricians.com</p>
+            <p className="text-[6px] text-white/40 tracking-widest uppercase mt-0.5">Trusted &middot; Verified &middot; Recognized</p>
+            <p className="text-[7px] text-teal/80 mt-0.5">2026 Listed</p>
           </div>
         </div>
 
@@ -211,7 +211,7 @@ function ProfileContent() {
           <div className="bg-white rounded-lg border border-gray-100 p-2">
             <p className="text-[8px] font-bold text-gray-400 uppercase tracking-wider mb-1.5">About</p>
             <p className="text-[9px] text-gray-600 leading-relaxed">
-              {company.name} is a top-rated nephrology practice serving the Dallas metro area with expert kidney care for patients and referring physicians.
+              {company.name} is a top-rated geriatric practice serving the Dallas metro area with comprehensive senior care for older adults, families, and referring physicians.
             </p>
           </div>
           <div className="bg-white rounded-lg border border-gray-100 p-2">
@@ -220,8 +220,8 @@ function ProfileContent() {
               <p className="text-[8px] font-bold text-gray-400 uppercase tracking-wider">Specialties</p>
             </div>
             {[
-              { name: "Chronic Kidney Disease", title: "Board-Certified Nephrologist" },
-              { name: "Dialysis Management", title: "Fellowship Trained" },
+              { name: "Dementia & Memory Care", title: "Board-Certified Geriatrician" },
+              { name: "Falls Prevention", title: "Fellowship Trained" },
             ].map((o) => (
               <div key={o.name} className="flex items-center gap-1.5 mb-1.5 last:mb-0">
                 <div className="h-5 w-5 rounded-full bg-teal/10 flex items-center justify-center flex-shrink-0">
@@ -241,8 +241,8 @@ function ProfileContent() {
             </div>
             <div className="space-y-1.5">
               {[
-                { author: "M. Thompson", text: "Exceptional kidney care. Compassionate, thorough, and highly effective." },
-                { author: "R. Patel", text: "After my diagnosis, this team gave me the best nephrology care I could ask for. Highly recommend." },
+                { author: "M. Thompson", text: "Exceptional senior care. Compassionate, thorough, and highly effective." },
+                { author: "R. Patel", text: "After my mother's diagnosis, this team gave her the best geriatric care we could ask for. Highly recommend." },
               ].map((r) => (
                 <div key={r.author} className="border-l-2 border-teal/30 pl-1.5">
                   <StarRating rating={5} size="xs" />
@@ -267,12 +267,12 @@ const CALLOUTS: Record<View, { color: string; icon: React.ReactNode; text: React
   profile: {
     color: "bg-navy/5 border-navy/20",
     icon: <TrendingUp className="h-4 w-4 text-teal" />,
-    text: <><span className="text-navy font-semibold">Professional Profile Page</span> — Every listed physician gets a dedicated profile with photo, nephrology specialties, kidney conditions treated, reviews, contact details, and your TopNephrologists.com 2027 recognition badge.</>,
+    text: <><span className="text-navy font-semibold">Professional Profile Page</span> — Every listed physician gets a dedicated profile with photo, geriatric specialties, senior care services, reviews, contact details, and your TopGeriatricians.com 2026 verified badge.</>,
   },
   directory: {
     color: "bg-white border-sky-dark",
     icon: <span className="text-navy text-[10px] font-bold">✓</span>,
-    text: <><span className="text-navy font-semibold">Directory Listing</span> — Your practice appears in the ranked directory by city and nephrology specialty. Every visitor can click through to your full professional profile page.</>,
+    text: <><span className="text-navy font-semibold">Directory Listing</span> — Your practice appears in the ranked directory by city and geriatric specialty. Every visitor can click through to your full professional profile page.</>,
   },
 };
 
@@ -282,8 +282,8 @@ export default function DirectoryPreview() {
 
   const browserUrl =
     view === "profile"
-      ? "topnephrologists.com/physicians/summit-kidney-specialists"
-      : "topnephrologists.com/dallas-tx";
+      ? "topgeriatricians.com/physicians/summit-senior-care"
+      : "topgeriatricians.com/dallas-tx";
 
   return (
     <section className="bg-sky py-20 lg:py-24 overflow-hidden relative">
@@ -307,12 +307,12 @@ export default function DirectoryPreview() {
         {/* 3-way toggle */}
         <FadeIn delay={0.05}>
           <div className="flex justify-center mb-8">
-            <div className="inline-flex rounded-xl border border-sky-dark bg-white p-1 shadow-sm gap-1">
+            <div className="inline-flex flex-wrap justify-center rounded-xl border border-sky-dark bg-white p-1 shadow-sm gap-1">
               <button
                 onClick={() => setView("featured")}
-                className={`inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                className={`inline-flex items-center gap-1.5 px-3 py-2 sm:px-4 sm:py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-200 whitespace-nowrap ${
                   view === "featured"
-                    ? "bg-teal text-white shadow-md shadow-teal/30"
+                    ? "bg-gradient-to-r from-teal to-teal-dark text-white shadow-md shadow-teal/30"
                     : "text-muted hover:text-navy"
                 }`}
               >
@@ -321,7 +321,7 @@ export default function DirectoryPreview() {
               </button>
               <button
                 onClick={() => setView("profile")}
-                className={`px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                className={`px-3 py-2 sm:px-4 sm:py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-200 whitespace-nowrap ${
                   view === "profile" ? "bg-navy text-white shadow-sm" : "text-muted hover:text-navy"
                 }`}
               >
@@ -329,7 +329,7 @@ export default function DirectoryPreview() {
               </button>
               <button
                 onClick={() => setView("directory")}
-                className={`px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                className={`px-3 py-2 sm:px-4 sm:py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-200 whitespace-nowrap ${
                   view === "directory" ? "bg-navy text-white shadow-sm" : "text-muted hover:text-navy"
                 }`}
               >

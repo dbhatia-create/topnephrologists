@@ -3,6 +3,7 @@ import Image from "next/image";
 import Button from "./Button";
 import Container from "./Container";
 import FadeIn from "./FadeIn";
+import { LaurelLeft, LaurelRight } from "./LaurelWreath";
 
 export default function AwardsDinner() {
   return (
@@ -22,7 +23,7 @@ export default function AwardsDinner() {
                   </div>
                   <Image
                     src="/award.png"
-                    alt="TopNephrologists.com 2027 Recognition Award Plaque"
+                    alt="TopGeriatricians.com 2027 Recognition Award Plaque"
                     width={600}
                     height={720}
                     className="rounded-2xl shadow-2xl w-full h-auto"
@@ -38,17 +39,25 @@ export default function AwardsDinner() {
               Celebrate. Connect. Be Recognized.
             </p>
 
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-              Annual Awards &amp;
-              <br />
-              <span className="text-teal">Recognition Event</span>
-            </h2>
+            {/* Heading with flanking laurels */}
+            <div className="flex items-center gap-4 mb-6">
+              <LaurelLeft className="h-24 w-10 sm:h-28 sm:w-12 text-teal/60 flex-shrink-0" />
+              <div className="text-left">
+                <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                  Annual Awards &amp;
+                  <br />
+                  <span className="text-teal">Recognition Dinner</span>
+                </h2>
+              </div>
+              <LaurelRight className="h-24 w-10 sm:h-28 sm:w-12 text-teal/60 flex-shrink-0" />
+            </div>
 
             <p className="text-white/70 text-lg leading-relaxed mb-8">
               Every listed physician receives a custom recognition plaque and an
-              invitation to the Annual Awards &amp; Recognition Event in Summer
-              2027 — a night of peer recognition, networking, and celebration of
-              every listed nephrologist on TopNephrologists.com.
+              invitation to the Annual Awards &amp; Recognition Dinner — an
+              exclusive event bringing together recognized practices, industry
+              professionals, and invited guests to celebrate excellence in
+              geriatric care. Event schedule and location announced in advance.
             </p>
 
             <div className="space-y-4 mb-10">
@@ -59,7 +68,7 @@ export default function AwardsDinner() {
                 },
                 {
                   icon: Calendar,
-                  text: "Exclusive recognition event — Summer 2027",
+                  text: "Exclusive annual recognition event — schedule and location announced in advance",
                 },
                 {
                   icon: Users,
@@ -80,11 +89,11 @@ export default function AwardsDinner() {
                 Learn More
               </Button>
               <a
-                href="tel:+18669656339"
+                href="tel:+18664265255"
                 className="inline-flex items-center gap-2.5 rounded-lg border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white/80 hover:text-teal hover:border-teal/50 hover:bg-teal/10 transition-colors"
               >
                 <Phone className="h-4 w-4 text-teal" />
-                (866) 965-6339
+                (866) 426-5255
               </a>
             </div>
           </FadeIn>

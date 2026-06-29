@@ -5,7 +5,7 @@ import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about TopNephrologists.com — the premier directory connecting patients with top-rated nephrologists and kidney specialists nationwide.",
+  description: "Learn about TopGeriatricians.com — the premier directory connecting older adults and families with top-rated geriatricians and senior care specialists nationwide.",
 };
 
 export default function AboutPage() {
@@ -15,10 +15,10 @@ export default function AboutPage() {
         <Container>
           <div className="text-center">
             <h1 className="font-display text-3xl sm:text-4xl font-bold text-white mb-3">
-              About TopNephrologists.com
+              About TopGeriatricians.com
             </h1>
             <p className="text-white/70 text-lg max-w-xl leading-relaxed mx-auto">
-              TopNephrologists.com was founded to connect the public with trusted, top-rated nephrologists and kidney specialists across the United States.
+              TopGeriatricians.com was founded to connect older adults, families, and referring physicians with trusted, top-rated geriatricians and senior care specialists across the United States.
             </p>
           </div>
         </Container>
@@ -28,10 +28,10 @@ export default function AboutPage() {
         <div className="py-16 lg:py-24 max-w-3xl mx-auto text-center">
           <FadeIn>
             <p className="text-muted text-lg leading-relaxed mb-5">
-              Following our 2026 acquisition and complete redesign, we are building the most comprehensive nephrology directory in the country — one that kidney specialists are proud to be part of and patients can rely on when it matters most.
+              Following our 2026 acquisition and complete redesign, we are building the most comprehensive geriatric medicine directory in the country — one that senior care specialists are proud to be part of and families can rely on when it matters most.
             </p>
             <p className="text-muted text-lg leading-relaxed mb-12">
-              Our mission is simple: recognize excellence, elevate top nephrologists, and help patients find the right kidney care.
+              Our mission is simple: recognize excellence, elevate top geriatricians, and help older adults and their families find the right care.
             </p>
           </FadeIn>
 
@@ -40,17 +40,17 @@ export default function AboutPage() {
               {
                 icon: Target,
                 title: "Our Mission",
-                body: "Connect patients and referring physicians with trusted, verified nephrologists across every nephrology specialty and major U.S. city.",
+                body: "Connect older adults, families, and referring physicians with trusted, verified geriatricians across every geriatric specialty and major U.S. city.",
               },
               {
                 icon: ShieldCheck,
                 title: "Our Standards",
-                body: "Every listed physician undergoes a review process. Only qualified, board-eligible or board-certified nephrologists and kidney specialists are accepted.",
+                body: "Every listed physician undergoes a review process. Only qualified, board-eligible or board-certified geriatricians and senior care specialists are accepted.",
               },
               {
                 icon: Globe,
                 title: "Our Reach",
-                body: "All 50 states. 16+ nephrology specialties. Launching to the public in August 2026.",
+                body: "All 50 states. 16+ geriatric specialties. Launching to the public in August 2026.",
               },
             ].map(({ icon: Icon, title, body }) => (
               <FadeIn key={title}>
