@@ -4,14 +4,15 @@ import { calculateQuote, formatCurrency } from "./pricing";
 
 const FROM_EMAIL = "info@topgeriatricians.com";
 const FROM_NAME = "TopGeriatricians.com";
-const REPLY_TO = "abansal@brianmarketinggroup.com";
-const TEST_EMAIL = "abansal@brianmarketinggroup.com";
-const NOTIFICATION_EMAILS = [
-  "abansal@brianmarketinggroup.com",
-];
 
-function recipients(submitterEmail: string): string[] {
-  return submitterEmail.toLowerCase() === TEST_EMAIL ? [TEST_EMAIL] : NOTIFICATION_EMAILS;
+function getNotificationEmails(): string[] {
+  const raw = process.env.SALES_INBOX_EMAIL ?? "";
+  return raw.split(",").map((e) => e.trim()).filter(Boolean);
+}
+
+function recipients(): string[] {
+  const emails = getNotificationEmails();
+  return emails.length > 0 ? emails : [];
 }
 
 function isConfigured(): boolean {
@@ -123,10 +124,12 @@ ${data.plaqueShippingAddress}
 ${data.plaqueShippingCity}, ${data.plaqueShippingState} ${data.plaqueShippingZip}
 `.trim();
 
+  const to = recipients();
+  if (to.length === 0) { console.log("[email] No recipients configured."); return; }
   await sgMail.send({
-    to: recipients(data.email),
+    to,
     from: { email: FROM_EMAIL, name: FROM_NAME },
-    replyTo: { email: REPLY_TO, name: FROM_NAME },
+    replyTo: { email: data.email, name: `${data.contactFirstName} ${data.contactLastName}` },
     subject: `New Application: ${data.businessName} — ${data.locations.map((l) => `${l.city}, ${l.state}`).join(" | ")}`,
     text,
   });
@@ -159,10 +162,12 @@ Message:
 ${data.message}
 `.trim();
 
+  const to = recipients();
+  if (to.length === 0) { console.log("[email] No recipients configured."); return; }
   await sgMail.send({
-    to: recipients(data.email),
+    to,
     from: { email: FROM_EMAIL, name: FROM_NAME },
-    replyTo: { email: REPLY_TO, name: FROM_NAME },
+    replyTo: { email: data.email, name: `${data.firstName} ${data.lastName}` },
     subject: `Contact Inquiry: ${data.firstName} ${data.lastName}`,
     text,
   });
