@@ -15,10 +15,10 @@ export default function AnnouncementBanner() {
               </div>
               <div>
                 <p className="font-display text-lg font-bold text-white leading-snug">
-                  Pre-Launch Special — Balance of 2026 + All of 2027
+                  Now Accepting Applications
                 </p>
                 <p className="text-white/80 text-sm mt-0.5">
-                  Apply before August 2026 to lock in extended coverage at no extra cost.
+                  Apply today to secure your spot ahead of the August 2026 launch.
                 </p>
               </div>
             </div>

@@ -16,7 +16,7 @@ const steps = [
     num: "01",
     title: "Tell Us About Your Practice",
     description:
-      "Tell us about your geriatric practice, the specialties you offer, and the cities you serve. The profile submission takes about 5 minutes and includes a transparent pricing estimate.",
+      "Tell us about your geriatric practice, the specialties you offer, and the cities you serve. The profile submission takes about 5 minutes and includes transparent pricing.",
   },
   {
     num: "02",
@@ -30,12 +30,6 @@ const steps = [
     description:
       "Your listing debuts in August 2026 alongside all listed physicians — a coordinated national launch with patient and referring physician awareness campaigns.",
   },
-  {
-    num: "04",
-    title: "Be Recognized",
-    description:
-      "Display the TopGeriatricians.com 2027 verified badge on your website and connect with older adults, families, and referring physicians actively searching for geriatric care in your area.",
-  },
 ];
 
 export default function HowItWorksPage() {
@@ -47,7 +41,7 @@ export default function HowItWorksPage() {
           <p className="text-xs font-semibold text-teal uppercase tracking-widest mb-3">The Process</p>
           <h1 className="font-display text-3xl sm:text-4xl font-bold text-white mb-3">How It Works</h1>
           <p className="text-white/70 text-lg max-w-lg leading-relaxed mx-auto">
-            Four steps from submission to recognition. The process is simple — we handle the rest.
+            Three steps from submission to launch. The process is simple — we handle the rest.
           </p>
         </Container>
       </div>

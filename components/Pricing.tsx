@@ -1,4 +1,4 @@
-import { Check, Phone, Star } from "lucide-react";
+import { Check, Phone } from "lucide-react";
 import Button from "./Button";
 import Container from "./Container";
 import FadeIn from "./FadeIn";
@@ -39,16 +39,6 @@ export default function Pricing() {
             </p>
           </div>
 
-          {/* Pre-launch banner */}
-          <div className="max-w-2xl mx-auto mb-10">
-            <div className="flex items-center gap-3 rounded-xl bg-teal/10 border border-teal/30 px-5 py-4">
-              <Star className="h-5 w-5 text-teal flex-shrink-0" />
-              <div>
-                <p className="font-semibold text-navy text-sm">Pre-Launch Special</p>
-                <p className="text-sm text-muted">Apply before our August 2026 launch and receive half off the standard price of all listings.</p>
-              </div>
-            </div>
-          </div>
         </FadeIn>
 
         {/* Two cards */}
