@@ -19,7 +19,7 @@ export default function AwardsDinner() {
                 <div className="absolute -inset-6 bg-teal/10 rounded-3xl blur-2xl" />
                 <div className="relative w-full max-w-lg">
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 inline-flex items-center gap-2 justify-center px-4 py-1.5 bg-teal text-white font-bold text-[10px] tracking-widest uppercase rounded-full shadow-md whitespace-nowrap">
-                    Limited Time: Apply Today
+                    Included With Every Listing
                   </div>
                   <Image
                     src="/award.png"
@@ -64,7 +64,7 @@ export default function AwardsDinner() {
               {[
                 {
                   icon: Award,
-                  text: "Limited time: Complimentary custom recognition plaque with your application",
+                  text: "Complimentary custom recognition plaque with your application",
                 },
                 {
                   icon: Calendar,
