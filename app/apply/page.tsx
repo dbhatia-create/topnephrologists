@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import ApplyForm from "@/components/ApplyForm";
-import Container from "@/components/Container";
+import CheckoutWizard from "@/components/checkout/CheckoutWizard";
+import { geriatriciansConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Apply to Be Listed",
@@ -8,13 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function ApplyPage() {
-  return (
-    <div className="bg-sky min-h-screen py-16 lg:py-20">
-      <Container>
-        <div className="max-w-2xl mx-auto">
-          <ApplyForm />
-        </div>
-      </Container>
-    </div>
-  );
+  return <CheckoutWizard config={geriatriciansConfig} />;
 }
