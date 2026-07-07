@@ -34,7 +34,7 @@ export default function Step6ThankYou({ config }: { config: SiteConfig }) {
           )}
         </div>
 
-        {debugSubmissionPayload != null && (
+        {process.env.NODE_ENV !== "production" && debugSubmissionPayload != null && (
           <div className="text-left">
             <DebugPayloadPanel payload={debugSubmissionPayload} />
           </div>
