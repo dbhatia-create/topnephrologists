@@ -8,7 +8,7 @@ import { howItWorksFaqItems } from "@/content/faq";
 
 export const metadata: Metadata = {
   title: "How It Works",
-  description: "Learn how TopGeriatricians.com works — apply, get listed, and connect with patients and referring physicians in your city.",
+  description: "Learn how TopNephrologists.com works — apply, get listed, and connect with patients and referring physicians in your city.",
 };
 
 const steps = [
@@ -16,13 +16,13 @@ const steps = [
     num: "01",
     title: "Tell Us About Your Practice",
     description:
-      "Tell us about your geriatric practice, the specialties you offer, and the cities you serve. The profile submission takes about 5 minutes and includes transparent pricing.",
+      "Tell us about your nephrology practice, the specialties you offer, and the cities you serve. The profile submission takes about 5 minutes and includes transparent pricing.",
   },
   {
     num: "02",
     title: "Get Reviewed",
     description:
-      "Our team verifies your credentials and confirms your application details. Every qualifying geriatrician and senior care specialist is accepted. If we need anything to finalize your listing, we'll reach out directly.",
+      "Our team verifies your credentials and confirms your application details. Every qualifying nephrologist and kidney care specialist is accepted. If we need anything to finalize your listing, we'll reach out directly.",
   },
   {
     num: "03",
@@ -101,9 +101,9 @@ export default function HowItWorksPage() {
                   <ul className="space-y-1.5">
                     {[
                       "Full physician profile with photo & description",
-                      "TopGeriatricians.com verified badge for your website",
+                      "TopNephrologists.com verified badge for your website",
                       "Full listing in every city you serve",
-                      "Connects you with older adults, families, and referring physicians searching for geriatric care",
+                      "Connects you with patients, families, and referring physicians searching for nephrology care",
                     ].map((f) => (
                       <li key={f} className="flex items-start gap-2 text-sm text-muted">
                         <span className="text-teal font-bold mt-0.5">✓</span>

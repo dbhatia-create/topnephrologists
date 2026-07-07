@@ -6,22 +6,22 @@ const props = [
   {
     icon: Building2,
     heading: "Increase Visibility.",
-    body: "Help older adults and their families discover your practice when searching for specialized geriatric care in your city.",
+    body: "Help patients and their families discover your practice when searching for specialized nephrology care in your city.",
   },
   {
     icon: Globe,
     heading: "Build Trust & Credibility.",
-    body: "A professional profile helps patients and caregivers learn about your experience, approach to senior care, and areas of expertise — before the first appointment.",
+    body: "A professional profile helps patients and referring physicians learn about your experience, approach to kidney care, and areas of expertise — before the first appointment.",
   },
   {
     icon: TrendingUp,
     heading: "Differentiate Your Practice.",
-    body: "Highlight your specialties, services, and commitment to improving quality of life for aging adults — so families find the right fit for their loved one.",
+    body: "Highlight your specialties, services, and commitment to improving outcomes for patients with kidney disease — so patients find the right fit for their care.",
   },
   {
     icon: Users,
     heading: "Reach Every Stage.",
-    body: "Families often research several physicians before selecting a geriatrician. A listing helps ensure your practice is part of that decision-making process.",
+    body: "Patients often research several physicians before selecting a nephrologist. A listing helps ensure your practice is part of that decision-making process.",
   },
 ];
 
@@ -32,11 +32,11 @@ export default function ValueProps() {
         <FadeIn>
           <div className="text-center mb-14">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy mb-4">
-              For Geriatricians. Built for Growth.
+              For Nephrologists. Built for Growth.
             </h2>
             <div className="w-12 h-0.5 bg-teal mx-auto mb-5" />
             <p className="text-muted max-w-2xl mx-auto text-lg leading-relaxed">
-              TopGeriatricians.com is the new destination for geriatric medicine recognition and patient connection. Every practice that applies is listed and ready to be found.
+              TopNephrologists.com is the new destination for nephrology recognition and patient connection. Every practice that applies is listed and ready to be found.
             </p>
           </div>
         </FadeIn>

@@ -21,12 +21,12 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "TopGeriatricians.com — Get Your Practice Listed",
-    template: "%s | TopGeriatricians.com",
+    default: "TopNephrologists.com — Get Your Practice Listed",
+    template: "%s | TopNephrologists.com",
   },
   description:
-    "The premier directory of top geriatricians and senior care specialists nationwide. Get your practice listed and connect with older adults and families actively searching for geriatric care.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://topgeriatricians.com"),
+    "The premier directory of top nephrologists and kidney care specialists nationwide. Get your practice listed and connect with patients and referring physicians actively searching for nephrology care.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://topnephrologists.com"),
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    siteName: "TopGeriatricians.com",
-    images: [{ url: "/logo.png", width: 512, height: 512, alt: "TopGeriatricians.com" }],
+    siteName: "TopNephrologists.com",
+    images: [{ url: "/logo.png", width: 512, height: 512, alt: "TopNephrologists.com" }],
   },
 };
 

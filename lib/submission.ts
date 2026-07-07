@@ -9,7 +9,7 @@ import type {
 } from "@/lib/store/checkoutStore";
 
 /**
- * Maps the checkout wizard's store state into topgeriatricians' existing
+ * Maps the checkout wizard's store state into topnephrologists' existing
  * ApplyFormData shape (lib/schema.ts's applySchema), so it can be POSTed
  * straight to the existing /api/apply route (which validates against
  * applySchema and then calls the BFF via lib/bff.ts — this function does not

@@ -2,8 +2,8 @@ import sgMail from "@sendgrid/mail";
 import type { ApplyFormData, ContactFormData } from "./schema";
 import { calculateQuote, formatCurrency } from "./pricing";
 
-const FROM_EMAIL = "info@topgeriatricians.com";
-const FROM_NAME = "TopGeriatricians.com";
+const FROM_EMAIL = "info@topnephrologists.com";
+const FROM_NAME = "TopNephrologists.com";
 
 function getNotificationEmails(): string[] {
   const raw = process.env.SALES_INBOX_EMAIL ?? "";
@@ -71,7 +71,7 @@ export async function sendLeadEmail(
   const divider = "─".repeat(52);
 
   const text = `
-New listing application received on TopGeriatricians.com
+New listing application received on TopNephrologists.com
 
 SOURCE
 Traffic Source:  ${meta.referer || "direct"}
@@ -85,7 +85,7 @@ Phone:         ${data.businessPhone}
 Cities:        ${data.locations.map((l) => `${l.city}, ${l.state}`).join(" | ")}
 Assets:        ${data.assetPermission === "grant" ? "Permission granted to use website assets" : "Support team to contact for assets"}
 
-GERIATRIC SPECIALTIES
+NEPHROLOGY SPECIALTIES
 ${data.services.map((p) => `  • ${p}`).join("\n")}
 Featured Placement: ${data.featuredPlacement ? "Yes" : "No"}
 
@@ -146,7 +146,7 @@ export async function sendContactEmail(
   init();
 
   const text = `
-New contact inquiry from TopGeriatricians.com
+New contact inquiry from TopNephrologists.com
 
 SOURCE
 Traffic Source:  ${meta.referer || "direct"}

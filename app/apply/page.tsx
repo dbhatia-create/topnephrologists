@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import CheckoutWizard from "@/components/checkout/CheckoutWizard";
-import { geriatriciansConfig } from "@/lib/config";
+import { nephrologistsConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Apply to Be Listed",
-  description: "Apply to be listed on TopGeriatricians.com. Reach older adults, families, and referring physicians actively searching for geriatric care.",
+  description: "Apply to be listed on TopNephrologists.com. Reach patients and referring physicians actively searching for nephrology and kidney care.",
 };
 
 export default function ApplyPage() {
-  return <CheckoutWizard config={geriatriciansConfig} />;
+  return <CheckoutWizard config={nephrologistsConfig} />;
 }

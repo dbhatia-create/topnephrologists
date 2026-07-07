@@ -20,7 +20,7 @@ export default function ThanksPage() {
             Application Received!
           </h1>
           <p className="text-muted text-lg leading-relaxed mb-8">
-            Thank you for applying to TopGeriatricians.com. If we need anything to finalize your listing, we&apos;ll reach out. In the meantime, call us anytime at{" "}
+            Thank you for applying to TopNephrologists.com. If we need anything to finalize your listing, we&apos;ll reach out. In the meantime, call us anytime at{" "}
             <a href="tel:+18664265255" className="text-teal font-semibold hover:underline">(866) 426-5255</a>.
           </p>
           <div className="rounded-xl border border-navy/10 bg-navy/5 p-6 text-left mb-8">
@@ -36,7 +36,7 @@ export default function ThanksPage() {
             </ul>
           </div>
           <Link href="/" className="text-teal font-medium text-sm hover:underline">
-            ← Back to TopGeriatricians.com
+            ← Back to TopNephrologists.com
           </Link>
         </div>
       </Container>

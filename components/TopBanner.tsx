@@ -12,10 +12,10 @@ export default function TopBanner() {
             </div>
             <div className="min-w-0">
               <p className="text-sm font-bold text-white leading-tight">
-                TopGeriatricians.com — Launching August 2026.
+                TopNephrologists.com — Launching August 2026.
               </p>
               <p className="text-xs text-white/50 mt-0.5 leading-tight">
-                The premier directory for geriatricians and senior care specialists.{" "}
+                The premier directory for nephrologists and kidney care specialists.{" "}
                 <span className="text-teal font-medium">All listings debut August 2026.</span>
               </p>
             </div>

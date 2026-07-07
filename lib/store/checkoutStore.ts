@@ -306,7 +306,7 @@ export const useCheckoutStore = create<CheckoutState>()(
         }),
     }),
     {
-      name: "topgeriatricians-checkout-v1",
+      name: "topnephrologists-checkout-v1",
       storage: {
         getItem: (key) => {
           if (typeof window === "undefined") return null;

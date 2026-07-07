@@ -23,10 +23,10 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <Image src="/logo.png" alt="TopGeriatricians.com" width={32} height={32} className="h-8 w-8 object-contain invert mix-blend-screen" />
+            <Image src="/logo.png" alt="TopNephrologists.com" width={32} height={32} className="h-8 w-8 object-contain invert mix-blend-screen" />
             <span className="flex flex-col items-center">
               <span className="font-display text-lg font-bold text-white leading-none">
-                TopGeriatricians<span className="text-teal">.com</span>
+                TopNephrologists<span className="text-teal">.com</span>
               </span>
               <span className="text-[9px] text-white/50 tracking-widest uppercase mt-0.5">
                 Trusted &middot; Verified &middot; Recognized

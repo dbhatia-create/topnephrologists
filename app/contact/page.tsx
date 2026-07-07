@@ -6,7 +6,7 @@ import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with the TopGeriatricians.com team. We're here to answer your questions about listings and Featured Listings.",
+  description: "Get in touch with the TopNephrologists.com team. We're here to answer your questions about listings and Featured Listings.",
 };
 
 export default function ContactPage() {
@@ -49,8 +49,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-navy text-sm">Email</p>
-                      <a href="mailto:info@topgeriatricians.com" className="text-teal text-sm font-medium hover:underline">
-                        info@topgeriatricians.com
+                      <a href="mailto:info@topnephrologists.com" className="text-teal text-sm font-medium hover:underline">
+                        info@topnephrologists.com
                       </a>
                     </div>
                   </div>

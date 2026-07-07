@@ -80,10 +80,10 @@ export default function Step2ContactInfo({ config }: { config: SiteConfig }) {
               <Input {...register("lastName")} error={errors.lastName?.message} placeholder="Smith" />
             </FormField>
             <FormField label="Title / Role" error={errors.title?.message}>
-              <Input {...register("title")} error={errors.title?.message} placeholder="Geriatrician, Medical Director…" />
+              <Input {...register("title")} error={errors.title?.message} placeholder="Nephrologist, Medical Director…" />
             </FormField>
             <FormField label="Company / Practice" error={errors.company?.message}>
-              <Input {...register("company")} error={errors.company?.message} placeholder="Summit Senior Care" />
+              <Input {...register("company")} error={errors.company?.message} placeholder="Summit Kidney Care" />
             </FormField>
             <FormField label="Email Address" required error={errors.email?.message}>
               <Input type="email" {...register("email")} error={errors.email?.message} placeholder="jane@yourpractice.com" />

@@ -6,10 +6,10 @@ import { PRICING, formatCurrency } from "@/lib/pricing";
 
 const BASIC_FEATURES = [
   "Full professional profile with credentials & description",
-  "Listed by city and geriatric specialties",
+  "Listed by city and nephrology specialties",
   "City directory placement",
   "Contact details, website & social media",
-  "TopGeriatricians.com verified badge",
+  "TopNephrologists.com verified badge",
 ];
 
 const FEATURED_EXTRAS = [

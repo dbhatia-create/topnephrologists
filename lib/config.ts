@@ -4,11 +4,10 @@
  * logic, so the same wizard code can be reused across other BMG directory
  * sites later.
  *
- * Ported from topphysiatrists' lib/config.ts (same scaffold generation).
  * Pricing, specialty list, and listing fields below are derived from this
- * site's own lib/pricing.ts (PRICING), content/services.ts (the geriatric
+ * site's own lib/pricing.ts (PRICING), content/services.ts (the nephrology
  * specialty list), and the old components/ApplyForm.tsx (Step 5's actual
- * field set) — not copied verbatim from another vertical's copy/pricing.
+ * field set).
  */
 
 import { services } from "@/content/services";
@@ -96,10 +95,10 @@ export interface SiteConfig {
   productionTimelineDays: number;
 }
 
-export const geriatriciansConfig: SiteConfig = {
-  siteName: "Top Geriatricians",
-  brandTagline: "Get Listed — TopGeriatricians.com",
-  businessNoun: "geriatric practice",
+export const nephrologistsConfig: SiteConfig = {
+  siteName: "Top Nephrologists",
+  brandTagline: "Get Listed — TopNephrologists.com",
+  businessNoun: "nephrology practice",
 
   marketType: "city",
   marketLabel: "City",
@@ -126,15 +125,13 @@ export const geriatriciansConfig: SiteConfig = {
   // is no additional paid enhancement list).
   upsells: [],
 
-  // Geriatric Specialties are an *optional* free multi-select in the old
-  // ApplyForm.tsx ("Geriatric Specialties (optional)" — see
-  // components/ApplyForm.tsx line ~424), backed by content/services.ts. No
-  // per-specialty pricing exists (lib/pricing.ts's PRICING has no such rate),
-  // so pricePerOption is 0 and required is false (unlike topphysiatrists,
-  // where Service selection is required).
+  // Nephrology Specialties are an *optional* free multi-select in the old
+  // ApplyForm.tsx, backed by content/services.ts. No per-specialty pricing
+  // exists (lib/pricing.ts's PRICING has no such rate), so pricePerOption is
+  // 0 and required is false.
   specialty: {
     required: false,
-    label: "Geriatric Specialties",
+    label: "Nephrology Specialties",
     options: services.map((s) => ({ id: s.id, label: s.label })),
     pricePerOption: 0,
   },

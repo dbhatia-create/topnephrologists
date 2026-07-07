@@ -5,9 +5,9 @@ export interface FaqItem {
 
 export const faqItems: FaqItem[] = [
   {
-    question: "Who is TopGeriatricians.com for?",
+    question: "Who is TopNephrologists.com for?",
     answer:
-      "TopGeriatricians.com is for board-certified geriatricians and senior care specialists who want to increase their practice visibility and connect with older adults, family caregivers, and referring physicians actively searching for geriatric care in their area.",
+      "TopNephrologists.com is for board-certified nephrologists and kidney care specialists who want to increase their practice visibility and connect with patients, family caregivers, and referring physicians actively searching for nephrology care in their area.",
   },
   {
     question: "What does a listing cost?",
@@ -30,14 +30,14 @@ export const faqItems: FaqItem[] = [
       "Yes. You can add as many cities as you serve. Each city is billed separately at $289/year. If you add Featured placement, the upgrade is $689 per city.",
   },
   {
-    question: "What geriatric specialties can I highlight?",
+    question: "What nephrology specialties can I highlight?",
     answer:
-      "You can showcase any specialties you practice — dementia and memory care, chronic disease management, medication management, falls prevention, palliative care, osteoporosis, diabetes management in seniors, and more. Your specialty selections are featured prominently on your listing.",
+      "You can showcase any specialties you practice — chronic kidney disease management, dialysis care, kidney transplant care, hypertension management, glomerular disease, kidney stones, and more. Your specialty selections are featured prominently on your listing.",
   },
   {
     question: "Is my application guaranteed to be accepted?",
     answer:
-      "Yes — every qualifying geriatrician or geriatric practice that applies is accepted. We will reach out if we need any additional information to finalize your listing.",
+      "Yes — every qualifying nephrologist or nephrology practice that applies is accepted. We will reach out if we need any additional information to finalize your listing.",
   },
   {
     question: "Why should I apply now?",
@@ -47,7 +47,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "What is the Awards & Recognition Dinner?",
     answer:
-      "The Awards & Recognition Dinner is an exclusive annual event celebrating the practices featured on TopGeriatricians.com. It brings together recognized practices, industry professionals, and invited guests to celebrate excellence in patient care. Each listing includes an invitation for your practice, with the event schedule and location announced in advance.",
+      "The Awards & Recognition Dinner is an exclusive annual event celebrating the practices featured on TopNephrologists.com. It brings together recognized practices, industry professionals, and invited guests to celebrate excellence in patient care. Each listing includes an invitation for your practice, with the event schedule and location announced in advance.",
   },
   {
     question: "Can I cancel my listing?",
@@ -57,7 +57,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Do I need to be in private practice?",
     answer:
-      "Not at all. TopGeriatricians.com welcomes geriatricians in private practice, academic medical centers, hospital-based practices, and long-term care facilities alike. If you provide geriatric care services, you qualify for a listing.",
+      "Not at all. TopNephrologists.com welcomes nephrologists in private practice, academic medical centers, hospital-based practices, and dialysis centers alike. If you provide nephrology or kidney care services, you qualify for a listing.",
   },
 ];
 

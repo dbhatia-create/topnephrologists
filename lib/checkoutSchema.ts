@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { geriatriciansConfig, type SiteConfig } from "./config";
+import { nephrologistsConfig, type SiteConfig } from "./config";
 
 const stateSchema = z.string().min(2, "Select a state");
 const zipSchema = z.string().regex(/^\d{5}(-\d{4})?$/, "Enter a valid ZIP code");
@@ -35,7 +35,7 @@ export const marketSelectionSchema = z
 export type MarketSelectionData = z.infer<typeof marketSelectionSchema>;
 
 // ---------------------------------------------------------------------------
-// Screen 2 — Contact Information (topgeriatricians always ships a plaque, so
+// Screen 2 — Contact Information (topnephrologists always ships a plaque, so
 // there's no "without shipping" branch here — matches lib/schema.ts's
 // applySchema, which always requires plaqueShippingAddress/City/State/Zip.
 // Unlike topphysiatrists, "company" is optional here — applySchema's
@@ -158,7 +158,7 @@ export const listingInfoLaterSchema = z.object({
 });
 
 export const listingInfoSchema = z.discriminatedUnion("listingChoice", [
-  buildListingInfoNowObjectSchema(geriatriciansConfig),
+  buildListingInfoNowObjectSchema(nephrologistsConfig),
   listingInfoLaterSchema,
 ]);
 

@@ -23,7 +23,7 @@ export default function AwardsDinner() {
                   </div>
                   <Image
                     src="/award.png"
-                    alt="TopGeriatricians.com 2027 Recognition Award Plaque"
+                    alt="TopNephrologists.com 2027 Recognition Award Plaque"
                     width={600}
                     height={720}
                     className="rounded-2xl shadow-2xl w-full h-auto"
@@ -57,7 +57,7 @@ export default function AwardsDinner() {
               invitation to the Annual Awards &amp; Recognition Dinner — an
               exclusive event bringing together recognized practices, industry
               professionals, and invited guests to celebrate excellence in
-              geriatric care. Event schedule and location announced in advance.
+              nephrology care. Event schedule and location announced in advance.
             </p>
 
             <div className="space-y-4 mb-10">

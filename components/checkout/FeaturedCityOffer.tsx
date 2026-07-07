@@ -3,7 +3,7 @@
 import { Zap, Star, MapPin, Building2 } from "lucide-react";
 import { formatCurrency } from "@/lib/pricing";
 
-const OTHER_LISTINGS = ["Riverside Geriatric Partners", "Silver Oak Senior Care", "Cornerstone Elder Medicine"];
+const OTHER_LISTINGS = ["Riverside Nephrology Partners", "Silver Oak Kidney Care", "Cornerstone Renal Medicine"];
 
 /**
  * A bigger mockup than a single card — mimics this site's homepage directory

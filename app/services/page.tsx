@@ -5,8 +5,8 @@ import Button from "@/components/Button";
 import { services } from "@/content/services";
 
 export const metadata: Metadata = {
-  title: "Geriatric Specialties",
-  description: "Browse the geriatric specialties available on TopGeriatricians.com — from dementia and memory care to chronic disease management, medication management, falls prevention, and healthy aging.",
+  title: "Nephrology Specialties",
+  description: "Browse the nephrology specialties available on TopNephrologists.com — from chronic kidney disease management to dialysis care, kidney transplant care, and hypertension management.",
 };
 
 export default function ServicesPage() {
@@ -14,9 +14,9 @@ export default function ServicesPage() {
     <div className="bg-white min-h-screen">
       <div className="bg-navy py-14">
         <Container>
-          <h1 className="font-display text-3xl sm:text-4xl font-bold text-white mb-3">Geriatric Specialties</h1>
+          <h1 className="font-display text-3xl sm:text-4xl font-bold text-white mb-3">Nephrology Specialties</h1>
           <p className="text-white/70 text-lg max-w-lg leading-relaxed">
-            TopGeriatricians.com covers the full spectrum of geriatric specialties — so older adults, families, and referring physicians can find the right senior care specialist that matches their exact needs.
+            TopNephrologists.com covers the full spectrum of nephrology specialties — so patients, families, and referring physicians can find the right kidney care specialist that matches their exact needs.
           </p>
         </Container>
       </div>
@@ -25,8 +25,8 @@ export default function ServicesPage() {
         <div className="py-16 lg:py-20">
           <FadeIn>
             <p className="text-muted text-lg leading-relaxed max-w-2xl mb-14">
-              When you apply, select all the geriatric specialties your practice offers. These appear on your listing
-              and help older adults, families, and referring physicians instantly understand your expertise. Your specialty selections do not
+              When you apply, select all the nephrology specialties your practice offers. These appear on your listing
+              and help patients, families, and referring physicians instantly understand your expertise. Your specialty selections do not
               affect pricing — the basic listing fee covers all specialties.
             </p>
           </FadeIn>
@@ -53,7 +53,7 @@ export default function ServicesPage() {
             <div className="rounded-2xl bg-navy p-8 text-center">
               <h2 className="font-display text-2xl font-bold text-white mb-3">Ready to Get Listed?</h2>
               <p className="text-white/70 mb-6 max-w-md mx-auto">
-                Select your geriatric specialties when you apply. Every qualifying geriatrician and senior care specialist is accepted.
+                Select your nephrology specialties when you apply. Every qualifying nephrologist and kidney care specialist is accepted.
               </p>
               <Button href="/apply" variant="primary" size="lg">Apply Now</Button>
             </div>

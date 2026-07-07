@@ -41,9 +41,9 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg text-white/70 max-w-xl mb-8 leading-relaxed">
-              TopGeriatricians.com is the premier directory connecting
-              older adults, families, and referring physicians with top-rated
-              geriatricians and senior care specialists across the country.
+              TopNephrologists.com is the premier directory connecting
+              patients, families, and referring physicians with top-rated
+              nephrologists and kidney care specialists across the country.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -66,7 +66,7 @@ export default function Hero() {
                   <div className="relative h-[480px] w-full">
                     <Image
                       src={IMAGES.heroPortrait}
-                      alt="Top-rated geriatrician"
+                      alt="Top-rated nephrologist"
                       fill
                       className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                       priority
@@ -76,7 +76,7 @@ export default function Hero() {
 
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
                     <p className="text-sm text-white/70 leading-relaxed max-w-sm">
-                      Build credibility with a professional profile that highlights your geriatric specialties, approach to senior care, and the conditions you treat.
+                      Build credibility with a professional profile that highlights your nephrology specialties, approach to kidney care, and the conditions you treat.
                     </p>
                   </div>
                 </div>

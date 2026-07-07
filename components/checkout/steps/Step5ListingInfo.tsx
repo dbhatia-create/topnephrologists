@@ -184,7 +184,7 @@ export default function Step5ListingInfo({ config }: { config: SiteConfig }) {
                   value={info.businessName}
                   onChange={(e) => store.setListingInfo({ businessName: e.target.value })}
                   error={errors.businessName}
-                  placeholder="Apex Geriatric Associates"
+                  placeholder="Apex Nephrology Associates"
                 />
               </FormField>
               <FormField label="Listing Phone Number" required error={errors.listingPhone}>
@@ -301,7 +301,7 @@ export default function Step5ListingInfo({ config }: { config: SiteConfig }) {
               onChange={(v) => store.setListingInfo({ bio: v })}
               maxChars={config.listingFields.bioMaxChars}
               error={errors.bio}
-              placeholder="Describe your geriatric practice, your approach to senior care, and what makes your practice stand out for older adults and their families…"
+              placeholder="Describe your nephrology practice, your approach to kidney care, and what makes your practice stand out for patients and referring physicians…"
             />
 
             <BusinessHoursEditor
